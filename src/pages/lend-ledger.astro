@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Lend Ledger | Impact Collective">
+  <Header />
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
+      <h1 class="text-center mb-6" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+        LEND LEDGER
+      </h1>
+      <p class="text-center mb-12 mx-auto" style="font-family: var(--font-primary); font-size: 18px; color: var(--color-text-body); max-width: 700px;">
+        Lend Ledger is Impact Collective's custom tracking tool that helps chapters manage their lending activity, monitor loan repayments, and measure their social impact in real time.
+      </p>
+
+      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000;">
+        Getting Started
+      </h2>
+      <div class="mx-auto mb-12" style="max-width: 700px;">
+        <ol style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: decimal; padding-left: 24px;">
+          <li style="margin-bottom: 8px;">Download or launch Lend Ledger using the links below.</li>
+          <li style="margin-bottom: 8px;">Enter your chapter's Kiva lending team information.</li>
+          <li style="margin-bottom: 8px;">Log each microloan you fund — including the borrower, amount, and sector.</li>
+          <li style="margin-bottom: 8px;">Track repayments and reinvest returned capital into new loans.</li>
+          <li>View your chapter's cumulative impact dashboard.</li>
+        </ol>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: var(--color-btn-primary-bg); color: #ffffff; border-radius: 100px; font-family: var(--font-primary); font-size: 16px;">
+          Download
+        </a>
+        <a href="#" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: #ffffff; border: 1px solid #000000; border-radius: 100px; font-family: var(--font-primary); font-size: 16px; color: #000000;">
+          Launch App
+        </a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>

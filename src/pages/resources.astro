@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Resources | Impact Collective">
+  <Header />
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
+      <h1 class="text-center mb-6" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+        Resources
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 12px;">
+            Learning Kit
+          </h2>
+          <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+            Our microfinance training materials cover everything from how microloans work to assessing risk and measuring social impact. All resources are student-friendly and curated from top print and online sources.
+          </p>
+          <a href="/docs/education-training.pdf" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
+            Download Training Guide
+          </a>
+        </div>
+        <div>
+          <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 12px;">
+            Workshops
+          </h2>
+          <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+            Join our hands-on workshops to learn about microfinance, entrepreneurship, and impact investing. Workshops are held virtually and in-person throughout the year.
+          </p>
+          <a href="#" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
+            View Schedule
+          </a>
+        </div>
+      </div>
+
+      <div class="mx-auto" style="max-width: 700px;">
+        <h2 class="text-center" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 12px;">
+          Lend Ledger
+        </h2>
+        <p class="text-center" style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
+          Lend Ledger is our custom tool that helps chapters track their lending activity, monitor repayments, and measure their impact over time. Download it and start tracking your chapter's progress.
+        </p>
+        <div class="text-center">
+          <a href="/lend-ledger" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
+            Learn More about Lend Ledger
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>

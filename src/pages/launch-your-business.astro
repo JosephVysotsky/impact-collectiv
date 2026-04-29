@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Launch your Business | Impact Collective">
+  <Header />
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
+      <h1 class="text-center mb-4" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+        Launch your Business
+      </h1>
+      <p class="text-center mb-12" style="font-size: 25px; font-weight: 400; letter-spacing: -0.25px;">
+        <span style="color: var(--color-accent-build);">Build</span><span style="color: var(--color-text-body);">.</span>
+        <span style="color: var(--color-accent-earn);">Earn</span><span style="color: var(--color-text-body);">.</span>
+        <span style="color: var(--color-accent-lend);">Lend</span><span style="color: var(--color-text-body);">.</span>
+      </p>
+
+      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000;">
+        The Playbook
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
+          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">1. Launch</h3>
+          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body);">
+            Pick a business idea that fits your skills and your school community. Whether it's food, tutoring, or services — start small and start now.
+          </p>
+        </div>
+        <div class="text-center p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
+          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">2. Set up Basics</h3>
+          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body);">
+            Set up your pricing, branding, and operations. Create a simple business plan and figure out your costs, revenue model, and reinvestment strategy.
+          </p>
+        </div>
+        <div class="text-center p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
+          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">3. Scale</h3>
+          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body);">
+            Grow your customer base, recruit team members, and reinvest profits into your Kiva lending team. Track your impact and share your story.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-center mb-6" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000;">
+        Case Study: Frostbite's Frozen Ice
+      </h2>
+      <div class="mx-auto" style="max-width: 700px;">
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+          Frostbite's Frozen Ice is a student-run frozen treats business launched as the lending arm of PD Microfinance. It demonstrates how a simple business idea can generate real capital for microloans.
+        </p>
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
+          By selling frozen treats at school events and local markets, Frostbite's has funded thousands of dollars in Kiva microloans — proving that student entrepreneurship and global impact can go hand in hand.
+        </p>
+        <a href="/docs/frostbites-frozen-ice.docx" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
+          Read the full case study
+        </a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>

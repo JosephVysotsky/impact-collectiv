@@ -1,16 +1,23 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Impact Collectiv | Microfinance' } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impact Collective</title>
+    <title>{title}</title>
     <meta name="description" content="Empowering students to lead Global Financial Inclusion with Microfinance." />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
   <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black">Skip to Main Content</a>
     <slot />
 
     <script>
