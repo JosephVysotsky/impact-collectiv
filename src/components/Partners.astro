@@ -1,0 +1,40 @@
+---
+const partners = [
+  { name: "Kiva", image: "/images/partner-kiva.png", width: 111, height: 101, url: "https://www.kiva.org/" },
+  { name: "Kiva Youth Project", image: "/images/partner-kyp.png", width: 111, height: 101, url: "https://www.kiva.org/lp/kyp" },
+  { name: "NHSMC", image: "/images/partner-nhsmc.png", width: 96, height: 88, url: "https://www.nhsmc.org/" },
+  { name: "Frostbite's Frozen Ice", image: "/images/partner-frostbite.png", width: 135, height: 133, url: "https://www.kiva.org/" },
+  { name: "Curry Kart", image: "/images/partner-currykart.png", width: 135, height: 120, url: "https://www.instagram.com/curry_kart/" },
+  { name: "Transcare Technology", image: "/images/partner-transcare.png", width: 185, height: 59, url: "https://transcaretechnology.com/" },
+];
+---
+
+<section class="w-full" style="background-color: var(--color-bg-white);">
+  <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
+    <h2 class="text-center mb-10 animate-on-scroll" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; line-height: 33.6px; letter-spacing: -0.24px; color: #000000;">
+      Our Partners
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
+      {partners.map((p) => (
+        <div class="flex flex-col items-center gap-4 animate-on-scroll">
+          <img
+            src={p.image}
+            alt={p.name}
+            width={p.width}
+            height={p.height}
+            class="object-contain"
+          />
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener"
+            style="font-family: var(--font-light); font-size: 17px; font-weight: 400; color: var(--color-text-dark); text-decoration: underline;"
+          >
+            Learn More
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

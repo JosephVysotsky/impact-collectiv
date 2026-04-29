@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impact Collective</title>
+    <meta name="description" content="Empowering students to lead Global Financial Inclusion with Microfinance." />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      // Scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+      // Counter animation for impact stats
+      function animateCounter(el, target, prefix = '', suffix = '') {
+        const duration = 2000;
+        const start = performance.now();
+        function update(time) {
+          const elapsed = time - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = prefix + Math.floor(eased * target).toLocaleString() + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+      }
+
+      const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            animateCounter(el, target, prefix, suffix);
+            statObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+    </script>
+  </body>
+</html>

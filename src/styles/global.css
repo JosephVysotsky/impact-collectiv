@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Nunito:wght@300;400&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-bg-white: #ffffff;
+  --color-bg-lavender: #d1d7f1;
+  --color-bg-grey: #bfbfbf;
+  --color-bg-navy: #191761;
+  --color-bg-cream: #fff5f0;
+
+  --color-text-black: #000000;
+  --color-text-body: #545454;
+  --color-text-dark: #282626;
+  --color-text-white: #fffffe;
+  --color-text-link: #384ad3;
+
+  --color-accent-build: #3d9be9;
+  --color-accent-earn: #0a16e0;
+  --color-accent-lend: #058a56;
+
+  --color-btn-primary-bg: #0a16e0;
+  --color-btn-cta-bg: #ffffff;
+  --color-btn-cta-border: #000000;
+
+  --font-primary: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-light: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+
+  --site-max-width: 1326px;
+  --content-max-width: 1274px;
+  --header-height: 131px;
+  --footer-height: 173px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-black);
+  overflow-x: hidden;
+}
+
+@layer base {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}

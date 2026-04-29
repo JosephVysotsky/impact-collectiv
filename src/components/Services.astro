@@ -1,0 +1,93 @@
+---
+const services = [
+  {
+    title: "Education & Training",
+    image: "/images/svc-education.jpg",
+    body: [
+      "Whether you're just getting started or ready to lead a microfinance club or kiva chapter, our training gives you the tools to succeed. You'll learn how microloans work, how to assess risk, measure social impact, and identify high-impact sectors.",
+      "All materials are student-friendly and curated from top print and online resources. We guide you step-by-step through setting up a Kiva lending team and running it with confidence."
+    ],
+    cta: { text: "Learn More", href: "#" },
+    imageLeft: true,
+  },
+  {
+    title: "Networking",
+    image: "/images/svc-networking.jpg",
+    body: [
+      "Join a global community of students passionate about microfinance and impact investing. Connect with peers, university chapters, alumni, and professionals to share ideas, collaborate, and learn from real experiences beyond your own school."
+    ],
+    cta: { text: "Get connected", href: "#" },
+    imageLeft: false,
+  },
+  {
+    title: "Student Entrepreneurship",
+    image: "/images/svc-entrepreneurship.jpg",
+    body: [
+      "Earn to invest - rather than asking to receive. We help students launch and run their own small businesses and invest profits into their Kiva lending teams, instead of relying on external donations.",
+      "Students run businesses like Frostbite's Frozen Ice to Curry Kart to make money and use it to fund microloans, gaining hands-on experience in entrepreneurship, finance, and capital alocation."
+    ],
+    cta: { text: "Start your hustle", href: "#" },
+    imageLeft: true,
+  },
+  {
+    title: "Internships & Job-Shadowing",
+    image: "/images/svc-internships.jpg",
+    body: [
+      "Explore long-term career pathways in microfinance and entrepreneurship through internships and job-shadowing opportunities with microfinance organizations.",
+      "Build your network while still in high school, rather than wait until college."
+    ],
+    cta: { text: "Apply here", href: "https://docs.google.com/forms/d/1QcT_0AVf2iXYoQUvXv5FDvInu1e_IuzvHX6u2BdARMY/viewform?edit_requested=true" },
+    imageLeft: false,
+  },
+  {
+    title: "Events & Competitions",
+    image: "/images/svc-events.jpg",
+    body: [
+      "Take your chapter beyond meetings. Our innovation challenges, speaker panels, and hands-on workshops bring chapters together to collaborate, compete, and share ideas—while earning recognition and cash prizes for leadership and impact."
+    ],
+    cta: { text: "Participate now", href: "https://docs.google.com/forms/d/e/1FAIpQLSfrk59x8dl5S23kWmTdxBBexn_5aNruASjRj3eOZcsPGe9nCQ/closedform?pli=1" },
+    imageLeft: true,
+  },
+];
+---
+
+<section id="services" class="w-full" style="background-color: var(--color-bg-grey);">
+  <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
+    <h2 class="text-center mb-10 animate-on-scroll" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; line-height: 33.6px; letter-spacing: -0.24px; color: #000000;">
+      Our Services
+    </h2>
+
+    <div class="flex flex-col gap-12">
+      {services.map((svc) => (
+        <div class={`flex flex-col md:flex-row gap-8 items-center animate-on-scroll ${!svc.imageLeft ? 'md:flex-row-reverse' : ''}`}>
+          <img
+            src={svc.image}
+            alt={svc.title}
+            width="470"
+            height="295"
+            class="object-cover flex-shrink-0"
+            style="width: 470px; max-width: 100%; height: 295px; object-position: center;"
+          />
+          <div>
+            <h3 style="font-family: var(--font-primary); font-size: 18px; font-weight: 400; line-height: 27px; letter-spacing: -0.18px; color: #000000; margin-bottom: 12px;">
+              {svc.title}
+            </h3>
+            {svc.body.map((p) => (
+              <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; line-height: 24px; color: var(--color-text-body); margin-bottom: 12px;">
+                {p}
+              </p>
+            ))}
+            <a
+              href={svc.cta.href}
+              target={svc.cta.href.startsWith('http') ? '_blank' : undefined}
+              rel={svc.cta.href.startsWith('http') ? 'noopener' : undefined}
+              style="font-family: var(--font-light); font-size: 17px; font-weight: 400; color: var(--color-text-dark); text-decoration: underline;"
+            >
+              {svc.cta.text}
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+---
+---
+
+<div id="newsletter-overlay" class="fixed inset-0 z-[1000] hidden items-center justify-center" style="background: rgba(25, 23, 97, 0.95);">
+  <div class="relative flex flex-col md:flex-row" style="background: var(--color-bg-cream); max-width: 812px; width: 90%; max-height: 90vh;">
+    <!-- Close button -->
+    <button
+      id="newsletter-close"
+      class="absolute top-3 right-4 text-2xl leading-none cursor-pointer z-10"
+      aria-label="Close"
+      style="background: none; border: none; font-size: 24px; color: #000;"
+    >
+      &#10005;
+    </button>
+
+    <!-- Left panel -->
+    <div class="flex-1 p-8 flex flex-col justify-center">
+      <h2 style="font-family: var(--font-primary); font-size: 40px; font-weight: 400; color: #000000; margin-bottom: 16px;">
+        Subscribe to our newsletter
+      </h2>
+      <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 8px;">
+        <strong>Be the first to know.</strong>
+      </p>
+      <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 24px;">
+        Sign up for the Impact Collective newsletter and stay current on our curriculum, new chapters, and the latest in microfinance and financial inclusion.
+      </p>
+
+      <form class="flex flex-col gap-3">
+        <label style="font-family: var(--font-primary); font-size: 14px; color: #000;">Enter your email here *</label>
+        <input
+          type="email"
+          placeholder="Email"
+          style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-light); font-size: 14px; color: #000000; width: 100%;"
+        />
+        <button
+          type="submit"
+          style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 8px 24px; font-size: 14px; color: #000000; width: 100%; max-width: 244px; cursor: pointer; font-family: var(--font-primary);"
+        >
+          Sign Up
+        </button>
+      </form>
+    </div>
+
+    <!-- Right panel -->
+    <div class="hidden md:block" style="width: 409px; flex-shrink: 0;">
+      <img
+        src="/images/newsletter-image.jpg"
+        alt="Newsletter"
+        class="w-full h-full object-cover"
+        style="max-height: 576px; object-position: center;"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('newsletter-overlay');
+  const closeBtn = document.getElementById('newsletter-close');
+
+  // Auto-open after 2.5s
+  setTimeout(() => {
+    if (overlay) {
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+    }
+  }, 2500);
+
+  // Close on button click
+  closeBtn?.addEventListener('click', () => {
+    overlay?.classList.add('hidden');
+    overlay?.classList.remove('flex');
+  });
+
+  // Close on overlay click (outside card)
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+    }
+  });
+</script>

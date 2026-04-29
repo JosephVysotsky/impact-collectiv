@@ -1,0 +1,108 @@
+---
+const subsections = [
+  {
+    bg: "var(--color-bg-grey)",
+    image: "/images/borrower-farmer.jpeg",
+    imageWidth: 733,
+    imageHeight: 661,
+    title: "Borrower Profiles",
+    useH3: true,
+    body: [
+      "We support people from underserved communities working hard to improve their lives—farmers, shopkeepers, artisans, refugees, students, single moms, and more. These are individuals who often lack access to traditional banks or cannot afford the high interest rates. Each loan supports them to build better lives and independence.",
+      "For many borrowers, even a small amount of capital can make a meaningful difference—buying seeds for the next planting season, purchasing inventory for a small shop, investing in tools for a trade, or paying for education. These loans are not charity; they are opportunities. By providing access to fair and affordable financing, we help hardworking individuals grow their livelihoods, support their families, and strengthen their communities over time."
+    ],
+    imageLeft: true,
+  },
+  {
+    bg: "var(--color-bg-lavender)",
+    image: "/images/borrower-windmills.jpg",
+    imageWidth: 733,
+    imageHeight: 541,
+    title: "Sustainability Projects",
+    useH3: true,
+    body: [
+      "Many of our borrowers work on solutions that help the environment—like solar energy, organic farming, or eco-friendly businesses. These projects not only help generate income but also protect the land and resources of the planet.",
+      "Supporting these initiatives means that microfinance can play an intentional role in addressing larger global challenges like climate change and environmental degradation. When borrowers invest in renewable energy, sustainable agriculture, or low-waste businesses, they are not only improving their livelihoods but also contributing to a healthier planet. In this way, access to fair capital can support both economic resilience and long-term environmental sustainability."
+    ],
+    imageLeft: false,
+  },
+  {
+    bg: "var(--color-bg-grey)",
+    image: "/images/borrower-economic.png",
+    imageWidth: 733,
+    imageHeight: 541,
+    title: "Economic Sectors",
+    useH3: true,
+    body: [
+      "We focus on industries that keep communities running—farming, fishing, retail, transport, and services. These sectors provide jobs, income, and daily essentials to families and neighborhoods. Helping them grow means helping entire communities thrive.",
+      "Our lending also intentionally supports sectors where small investments can protect livelihoods and local traditions. In some communities, that means helping artisans continue cultural crafts—such as pandanus basket weaving in places like Indonesia or Tonga—ensuring these skills remain both economically viable and culturally preserved."
+    ],
+    imageLeft: true,
+  },
+  {
+    bg: "var(--color-bg-lavender)",
+    image: "/images/borrower-school.jpg",
+    imageWidth: 733,
+    imageHeight: 541,
+    title: "Education & Community Development",
+    useH3: true,
+    body: [
+      "Our loans directly or indirectly support communities where access to learning is still a challenge. We support help rural schools with supplies, infrastructure, or teacher support—so more children can stay in school and complete their education.",
+      "In many villages, schools operate with very limited resources. Targeted support can help maintain classrooms, provide basic materials, and strengthen local education systems so that students are able to continue learning close to home. Investing in these communities helps create stronger foundations for the next generation."
+    ],
+    imageLeft: false,
+  },
+  {
+    bg: "var(--color-bg-grey)",
+    image: "/images/borrower-refugees.jpg",
+    imageWidth: 597,
+    imageHeight: 498,
+    title: "Refugees & Internally Displaced Persons",
+    useH3: false,
+    body: [
+      "Refugees are often excluded from traditional banking systems, making it difficult to access even small amounts of capital to rebuild their lives. Microloans provide a starting point—helping individuals open small businesses, restock goods, or generate income in new environments. Our microloans allow refugees to regain stability and integrate into new communities with independence and dignity.",
+      "Over time, these small businesses become steady sources of income, reducing dependence on aid and creating opportunities for more people within their communities."
+    ],
+    imageLeft: true,
+  },
+];
+---
+
+<div>
+  <section class="w-full" style="background-color: var(--color-bg-lavender);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-8">
+      <h2 class="text-center mb-4 animate-on-scroll" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; line-height: 33.6px; letter-spacing: -0.24px; color: #000000;">
+        Our Borrowers
+      </h2>
+    </div>
+  </section>
+
+  {subsections.map((sub) => (
+    <section class="w-full" style={`background-color: ${sub.bg};`}>
+      <div class={`max-w-[var(--content-max-width)] mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center ${!sub.imageLeft ? 'md:flex-row-reverse' : ''}`}>
+        <img
+          src={sub.image}
+          alt={sub.title}
+          class="animate-on-scroll object-cover flex-shrink-0"
+          style={`width: ${Math.min(sub.imageWidth, 733)}px; max-width: 100%; height: auto; object-position: center;`}
+        />
+        <div class="animate-on-scroll">
+          {sub.useH3 ? (
+            <h3 style="font-family: var(--font-primary); font-size: 18px; font-weight: 400; line-height: 27px; letter-spacing: -0.18px; color: #000000; margin-bottom: 12px;">
+              {sub.title}
+            </h3>
+          ) : (
+            <p style="font-family: var(--font-primary); font-size: 18px; font-weight: 400; color: #000000; margin-bottom: 12px;">
+              {sub.title}
+            </p>
+          )}
+          {sub.body.map((p) => (
+            <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; line-height: 24px; color: var(--color-text-body); margin-bottom: 12px;">
+              {p}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+</div>
