@@ -2,48 +2,48 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const ventures = [
+  { name: "Frostbite's Frozen Ice", image: "/images/venture-frostbite.jpg" },
+  { name: "All Day Soiree", image: "/images/venture-allday.jpg" },
+  { name: "Baked", image: "/images/venture-baked.jpg" },
+  { name: "Curry Kart", image: "/images/venture-currykart.jpg" },
+  { name: "Tutor Lion", image: "/images/venture-tutorlion.jpg" },
+];
 ---
 
 <Base title="Student Ventures | Impact Collective">
   <Header />
   <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
     <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h1 class="text-center mb-6" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+      <h1 class="text-center mb-12" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
         Student Ventures
       </h1>
-      <p class="text-center mb-12 mx-auto" style="font-family: var(--font-primary); font-size: 18px; color: var(--color-text-body); max-width: 700px;">
-        Our student-led businesses generate sustainable capital for microloans. Each venture is the lending arm of a chapter, turning earned revenue into real-world impact.
-      </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 8px;">Frostbite's Frozen Ice</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-bottom: 12px;">
-            A student-run frozen treats business that funds microloans through PD Microfinance's Kiva lending team.
-          </p>
-          <a href="/docs/frostbites-frozen-ice.docx" style="font-family: var(--font-light); font-size: 15px; color: var(--color-text-link); text-decoration: underline;">Learn More</a>
-        </div>
-        <div class="p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 8px;">All Day Soiree Baked</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-bottom: 12px;">
-            A student-run baking venture dedicated to funding microloans through delicious baked goods.
-          </p>
-          <a href="#" style="font-family: var(--font-light); font-size: 15px; color: var(--color-text-link); text-decoration: underline;">Learn More</a>
-        </div>
-        <div class="p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 8px;">Curry Kart</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-bottom: 12px;">
-            A student-run food venture bringing authentic flavors while funding global microfinance initiatives.
-          </p>
-          <a href="https://www.instagram.com/curry_kart/" target="_blank" rel="noopener" style="font-family: var(--font-light); font-size: 15px; color: var(--color-text-link); text-decoration: underline;">Learn More</a>
-        </div>
-        <div class="p-6" style="background: #ffffff; border: 1px solid #e0e0e0;">
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 8px;">Tutor Lion</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-bottom: 12px;">
-            A student-run tutoring service that channels earnings into microloans for underserved communities.
-          </p>
-          <a href="#" style="font-family: var(--font-light); font-size: 15px; color: var(--color-text-link); text-decoration: underline;">Learn More</a>
-        </div>
+      <div class="flex justify-center mb-12">
+        <img
+          src="/images/venture-banner.jpg"
+          alt="Give a hand up, not a hand out"
+          class="w-full max-w-[980px] object-cover"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        {ventures.map((v) => (
+          <div class="flex flex-col items-center" style="width: 370px; max-width: 100%;">
+            <img
+              src={v.image}
+              alt={v.name}
+              width="370"
+              height="267"
+              class="object-cover w-full"
+              style="height: 267px; background: #e0e0e0;"
+            />
+            <h3 style="font-family: var(--font-primary); font-size: 18px; font-weight: 400; color: #000000; margin-top: 12px; text-align: center;">
+              {v.name}
+            </h3>
+          </div>
+        ))}
       </div>
     </div>
   </section>

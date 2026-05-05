@@ -7,50 +7,152 @@ import Footer from '../components/Footer.astro';
 <Base title="Resources | Impact Collective">
   <Header />
   <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h1 class="text-center mb-6" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
-        Resources
-      </h1>
+    <div class="resources-container">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-            Learning Kit
-          </h2>
-          <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
-            Our microfinance training materials cover everything from how microloans work to assessing risk and measuring social impact. All resources are student-friendly and curated from top print and online sources.
-          </p>
-          <a href="/docs/education-training.pdf" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
-            Download Training Guide
-          </a>
+      <!-- Section 1: Learning Kit — Image LEFT, Text RIGHT -->
+      <div class="resources-row">
+        <div class="resources-image">
+          <img
+            src="https://static.wixstatic.com/media/b550da_208550ef91574833a3d3720ae224313d~mv2.png/v1/fill/w_260,h_331,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b550da_208550ef91574833a3d3720ae224313d~mv2.png"
+            alt="Learning Kit pamphlet"
+            width="260"
+            height="331"
+          />
         </div>
-        <div>
-          <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-            Workshops
-          </h2>
-          <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
-            Join our hands-on workshops to learn about microfinance, entrepreneurship, and impact investing. Workshops are held virtually and in-person throughout the year.
+        <div class="resources-text">
+          <h2 class="resources-title">Learning Kit</h2>
+          <p class="resources-body">
+            Microfinance is a way to provide small loans, insurance, and other financial services to people who don't have access to traditional banks. This includes low-income individuals, struggling entrepreneurs, and small business owners who need a little financial boost to grow, start a business, or improve their communities.
           </p>
-          <a href="#" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
-            View Schedule
-          </a>
+          <p class="resources-body">
+            PD Microfinance explains it simply with their curated training kit for beginners. <a href="/docs/education-training.pdf" class="resources-link">Click</a>
+          </p>
         </div>
       </div>
 
-      <div class="mx-auto" style="max-width: 700px;">
-        <h2 class="text-center" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-          Lend Ledger
-        </h2>
-        <p class="text-center" style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
-          Lend Ledger is our custom tool that helps chapters track their lending activity, monitor repayments, and measure their impact over time. Download it and start tracking your chapter's progress.
-        </p>
-        <div class="text-center">
-          <a href="/lend-ledger" style="font-family: var(--font-light); font-size: 17px; color: var(--color-text-link); text-decoration: underline;">
-            Learn More about Lend Ledger
-          </a>
+      <!-- Divider -->
+      <hr class="resources-divider" />
+
+      <!-- Section 2: Workshops — Title LEFT, Image RIGHT -->
+      <div class="resources-row">
+        <div class="resources-text">
+          <h2 class="resources-title">Workshops</h2>
+        </div>
+        <div class="resources-image">
+          <img
+            src="https://static.wixstatic.com/media/b550da_0a9b7f4551cb4223b54db635ca0d0ecd~mv2.jpg/v1/crop/x_0,y_156,w_2000,h_2086/fill/w_388,h_333,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/C36EB1EC-8075-405F-BFCA-20DCB339D6FF_edited.jpg"
+            alt="Workshops group photo"
+            width="388"
+            height="333"
+          />
         </div>
       </div>
+      <p class="resources-body resources-full-width">
+        This is your Project description. Provide a brief summary to help visitors understand the context and background of your work. Click on "Edit Text" or double click on the text box to start.
+      </p>
+
+      <!-- Section 3: Lend Ledger — Text LEFT, Image RIGHT -->
+      <div class="resources-row resources-row--top">
+        <div class="resources-text">
+          <h2 class="resources-title">Lend Ledger</h2>
+          <p class="resources-body">
+            Lend Ledger is a free app built for student-run Kiva lending chapters. It connects to your Kiva team to pull live lending stats, and gives you a simple ledger to log revenue from your ventures, track how much goes toward microloans, and monitor your chapter's overall impact.
+          </p>
+          <p class="resources-body">
+            No spreadsheets, no accounting software, no setup fee. Just download the file, enter your Kiva team ID, and the app configures itself around your chapter in under a minute.
+          </p>
+          <p class="resources-body">
+            Download Lend Ledger and the User Manual below to get started.
+          </p>
+          <a href="/lend-ledger" class="resources-link" style="text-decoration: underline;">Check it out</a>
+        </div>
+        <div class="resources-image">
+          <img
+            src="https://static.wixstatic.com/media/b550da_7a9f4d7daa004c07871e3506f4b31b1f~mv2.png/v1/fill/w_288,h_576,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b550da_7a9f4d7daa004c07871e3506f4b31b1f~mv2.png"
+            alt="Lend Ledger app on smartphone"
+            width="288"
+            height="576"
+          />
+        </div>
+      </div>
+
     </div>
   </section>
   <Footer />
 </Base>
+
+<style>
+  .resources-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .resources-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .resources-row--top {
+    align-items: flex-start;
+  }
+
+  .resources-image {
+    flex-shrink: 0;
+  }
+
+  .resources-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .resources-text {
+    flex: 1;
+  }
+
+  .resources-title {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+
+  .resources-body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .resources-full-width {
+    margin-top: 16px;
+  }
+
+  .resources-link {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: rgb(56, 74, 211);
+    text-decoration: none;
+  }
+
+  .resources-divider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 48px 0;
+  }
+
+  @media (max-width: 768px) {
+    .resources-row {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .resources-image {
+      text-align: center;
+    }
+  }
+</style>

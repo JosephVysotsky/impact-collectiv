@@ -6,37 +6,87 @@ import Footer from '../components/Footer.astro';
 
 <Base title="Lend Ledger | Impact Collective">
   <Header />
-  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h1 class="text-center mb-6" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+
+  <!-- Section 1: Hero (white background) -->
+  <section class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-16">
+      <h1 class="text-center mb-4" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000; text-transform: uppercase;">
         LEND LEDGER
       </h1>
-      <p class="text-center mb-12 mx-auto" style="font-family: var(--font-primary); font-size: 18px; color: var(--color-text-body); max-width: 700px;">
-        Lend Ledger is Impact Collective's custom tracking tool that helps chapters manage their lending activity, monitor loan repayments, and measure their social impact in real time.
+      <p class="text-center mb-8 mx-auto" style="font-family: var(--font-primary); font-size: 18px; color: var(--color-text-body); max-width: 700px;">
+        A free accounting and impact tracking app for Kiva lending chapters
       </p>
 
-      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000;">
-        Getting Started
-      </h2>
-      <div class="mx-auto mb-12" style="max-width: 700px;">
-        <ol style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: decimal; padding-left: 24px;">
-          <li style="margin-bottom: 8px;">Download or launch Lend Ledger using the links below.</li>
-          <li style="margin-bottom: 8px;">Enter your chapter's Kiva lending team information.</li>
-          <li style="margin-bottom: 8px;">Log each microloan you fund — including the borrower, amount, and sector.</li>
-          <li style="margin-bottom: 8px;">Track repayments and reinvest returned capital into new loans.</li>
-          <li>View your chapter's cumulative impact dashboard.</li>
-        </ol>
+      <div class="mx-auto mb-10" style="max-width: 700px;">
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+          Lend Ledger is a free app built for student-run Kiva lending chapters. It connects to your Kiva team to pull live lending stats, and gives you a simple ledger to log revenue from your ventures, track how much goes toward microloans, and monitor your chapter's overall impact.
+        </p>
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+          No spreadsheets, no accounting software, no setup fee. Just download the file, enter your Kiva team ID, and the app configures itself around your chapter in under a minute. Download Lend Ledger and the User Manual below to get started.
+        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: var(--color-btn-primary-bg); color: #ffffff; border-radius: 100px; font-family: var(--font-primary); font-size: 16px;">
-          Download
-        </a>
-        <a href="#" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: #ffffff; border: 1px solid #000000; border-radius: 100px; font-family: var(--font-primary); font-size: 16px; color: #000000;">
-          Launch App
+      <div class="flex justify-center">
+        <a href="https://www.impactcollectiv.com/_files/ugd/b550da_1568873515ac43d099fda06f25996659.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: #3f7652; color: #ffffff; border-radius: 50px; font-family: var(--font-primary); font-size: 16px;">
+          DOWNLOAD
         </a>
       </div>
     </div>
   </section>
+
+  <!-- Section 2: Full-width image strip -->
+  <section class="w-full" style="height: 383px; background-image: url('https://static.wixstatic.com/media/11062b_dad0a68f8c424ca3984638166091bf3a~mv2.jpg'); background-size: cover; background-position: center;">
+  </section>
+
+  <!-- Section 3: Getting Started (lavender background) -->
+  <section class="w-full" style="background-color: var(--color-bg-lavender);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-16">
+      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; text-transform: uppercase;">
+        GETTING STARTED
+      </h2>
+      <div class="mx-auto mb-10" style="max-width: 700px;">
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+          This App is fully plug-and-play for any Kiva chapter. Here's how it works:
+        </p>
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+          First launch — setup screen
+        </p>
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+          When you open the file for the first time, you will need to setup screen before the app loads. You will fill in four things
+        </p>
+        <ol style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: decimal; padding-left: 24px; margin-bottom: 16px;">
+          <li style="margin-bottom: 8px;">Your Chapter name (e.g. "PD Microfinance")</li>
+          <li style="margin-bottom: 8px;">Your Kiva team ID (e.g. pd_microfinance)</li>
+          <li style="margin-bottom: 8px;">Your lending goal with a target date, and the names of their ventures (e.g. Frostbite's Frozen Ice, Curry Kart, Baked)</li>
+        </ol>
+        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
+          You click Launch and that's it — the app configures itself around your chapter.
+        </p>
+      </div>
+
+      <div class="flex justify-center">
+        <button type="button" class="inline-flex items-center justify-center" style="width: 200px; height: 50px; background: #3f7652; color: #ffffff; border-radius: 50px; font-family: var(--font-primary); font-size: 16px; border: none; cursor: pointer;">
+          LAUNCH
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Try It Out (white background) -->
+  <section class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-16">
+      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; text-transform: uppercase;">
+        TRY IT OUT
+      </h2>
+      <div class="flex justify-center">
+        <iframe
+          src="https://www-impactcollectiv-com.filesusr.com/html/b550da_f7b0728e4bfb65ee6e43d0bd259ee51e.html"
+          style="width: 734px; max-width: 100%; height: 865px; border: none;"
+          title="Lend Ledger App"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
   <Footer />
 </Base>
