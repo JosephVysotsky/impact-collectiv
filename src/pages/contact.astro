@@ -6,103 +6,118 @@ import Footer from '../components/Footer.astro';
 
 <Base title="Contact us | Impact Collective">
   <Header />
-  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
+
+  <!-- Need help? full-width section -->
+  <section class="w-full" style="background-color: var(--color-bg-lavender);">
     <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Left: Need help? -->
-        <div>
-          <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px;">
-            Need help?
-          </h2>
-          <ul style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px; margin-bottom: 16px;">
-            <li>Start a Chapter</li>
-            <li>Start a Business</li>
-            <li>Microfinance training</li>
-            <li>Kiva tools</li>
-            <li>Lend Ledger</li>
-            <li>Guest speakers</li>
-          </ul>
-          <ul style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px;">
-            <li>Fundraising</li>
-            <li>Internships</li>
-            <li>Competition & Events</li>
-            <li>Networking</li>
-            <li>Job Shadowing</li>
-            <li>Service Hours Certificate</li>
-          </ul>
-        </div>
+      <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px;">
+        Need help?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ul style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px;">
+          <li>Start a Chapter</li>
+          <li>Start a Business</li>
+          <li>Microfinance training</li>
+          <li>Kiva tools</li>
+          <li>Lend Ledger</li>
+          <li>Guest speakers</li>
+        </ul>
+        <ul style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px;">
+          <li>Fundraising</li>
+          <li>Internships</li>
+          <li>Competition & Events</li>
+          <li>Networking</li>
+          <li>Job Shadowing</li>
+          <li>Service Hours Certificate</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <!-- Right: Contact Us -->
-        <div>
-          <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px;">
-            Contact Us
-          </h2>
+  <!-- Contact Us section -->
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 pb-12">
+      <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px;">
+        Contact Us
+      </h2>
 
-          <div style="margin-bottom: 16px;">
-            <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: #000000; margin-bottom: 4px;">Email</p>
-            <a href="mailto:impactcollectiv0625@gmail.com" style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-link); text-decoration: underline;">
-              impactcollectiv0625@gmail.com
-            </a>
-          </div>
+      <div style="margin-bottom: 16px;">
+        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: #000000; margin-bottom: 4px;">Email</p>
+        <a href="mailto:impactcollectiv0625@gmail.com" style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-link); text-decoration: underline;">
+          impactcollectiv0625@gmail.com
+        </a>
+      </div>
 
-          <div style="margin-bottom: 24px;">
-            <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: #000000; margin-bottom: 8px;">Social Media</p>
-            <div class="flex gap-3">
-              <a href="https://il.linkedin.com/company/wix-com" target="_blank" rel="noopener">
-                <img src="/images/icon-linkedin.svg" alt="LinkedIn" width="30" height="30" />
-              </a>
-              <a href="https://www.instagram.com/pdmicrofinance/" target="_blank" rel="noopener">
-                <img src="/images/icon-instagram.svg" alt="Instagram" width="30" height="30" />
-              </a>
-            </div>
-          </div>
-
-          <form action="#" method="POST" class="flex flex-col gap-4">
-            <div>
-              <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">First Name</label>
-              <input
-                type="text"
-                name="first_name"
-                style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
-              />
-            </div>
-            <div>
-              <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Last Name</label>
-              <input
-                type="text"
-                name="last_name"
-                style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
-              />
-            </div>
-            <div>
-              <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Email</label>
-              <input
-                type="email"
-                name="email"
-                style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
-              />
-            </div>
-            <div>
-              <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Message</label>
-              <textarea
-                name="message"
-                style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 10.5px 10px 3px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%; min-height: 120px; resize: vertical;"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              style="background: var(--color-btn-primary-bg); color: #000000; border: 1px solid #545454; border-radius: 0; width: 250px; height: 36px; font-family: var(--font-primary); font-size: 14px; cursor: pointer;"
-            >
-              Send
-            </button>
-          </form>
-
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-top: 16px;">
-            Thank you for taking the first step toward global financial inclusion. Our team will be in touch within 24 hours with next steps.
-          </p>
+      <div style="margin-bottom: 24px;">
+        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: #000000; margin-bottom: 8px;">Social Media</p>
+        <div class="flex gap-3">
+          <a href="https://www.instagram.com/pdmicrofinance/" target="_blank" rel="noopener">
+            <img src="/images/icon-instagram.svg" alt="Instagram" width="30" height="30" />
+          </a>
         </div>
       </div>
+
+      <form id="contact-form" class="flex flex-col gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">First Name</label>
+            <input
+              type="text"
+              name="first_name"
+              style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
+            />
+          </div>
+          <div>
+            <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Last Name</label>
+            <input
+              type="text"
+              name="last_name"
+              style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
+            />
+          </div>
+          <div>
+            <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Email</label>
+            <input
+              type="email"
+              name="email"
+              style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Message</label>
+          <textarea
+            name="message"
+            style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 10.5px 10px 3px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%; min-height: 120px; resize: vertical;"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          style="background: var(--color-btn-primary-bg); color: #000000; border: 1px solid #545454; border-radius: 0; width: 250px; height: 36px; font-family: var(--font-primary); font-size: 14px; cursor: pointer;"
+        >
+          Send
+        </button>
+      </form>
+
+      <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-top: 16px;">
+        Thank you for taking the first step toward global financial inclusion. Our team will be in touch within 24 hours with next steps.
+      </p>
     </div>
   </section>
   <Footer />
 </Base>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const firstName = data.get('first_name') || '';
+    const lastName = data.get('last_name') || '';
+    const email = data.get('email') || '';
+    const message = data.get('message') || '';
+    const subject = encodeURIComponent(`Contact from ${firstName} ${lastName}`);
+    const body = encodeURIComponent(`Name: ${firstName} ${lastName}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:impactcollectiv0625@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
