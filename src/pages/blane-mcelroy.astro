@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Blane McElroy | Impact Collective">
+  <Header />
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-10" style="max-width: 1230px;">
+      <a href="/executive-board" style="font-family: var(--font-primary); font-size: 15px; color: #000000; text-decoration: none;">
+        &lt; Back
+      </a>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+        <div style="max-width: 440px;">
+          <h1 style="font-family: var(--font-primary); font-size: 44px; font-weight: 400; letter-spacing: -1.5px; color: #000000; margin-bottom: 12px;">
+            Blane McElroy
+          </h1>
+          <p style="font-family: var(--font-primary); font-size: 18px; color: #000000; margin-bottom: 48px;">
+            Director of Marketing &amp; Communications
+          </p>
+          <p style="font-family: var(--font-primary); font-size: 15px; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 24px;">
+            Currently committed to the admissions process for soccer at Princeton University, Blane
+            McElroy continually seeks ways to give back to the local and global community. Inspired by
+            her parents&rsquo; evolution from a modest upbringing in rural Indiana to careers in major
+            financial centers of Chicago, New York and Charlotte, Blane knows that empowerment comes
+            from opportunity and deliberately seeks out organizations with aligned values to impact
+            underserved groups. As an advocate of inclusion, Blane currently serves organizations like
+            International House and Torus, promoting international understanding and helping immigrants
+            integrate into the local community. Partnering with Peace Passers Inc. she co-founded a
+            bi-annual uniform drive to provide 274 uniforms to soccer teams lacking access to proper
+            gear in Charlotte and Uganda.
+          </p>
+          <p style="font-family: var(--font-primary); font-size: 15px; line-height: 1.6; color: var(--color-text-dark);">
+            Blane has also generated $24,560 in funding to benefit Soccer Foundation of Charlotte
+            &ndash; raising $13,560 co-founding and co-directing an annual fundraising camp and
+            directing $11,000 in state and national grants earned &ndash; to provide local underserved
+            youth with access to soccer and literacy programing.&nbsp; Blane served as Communications
+            Chair for the Microfinance Club at Providence Day to empower entrepreneurs lacking access
+            to traditional banking with more than 50 loans issued &ndash; now transitioning to expand
+            her influence as Vice President of Impact Collective.
+          </p>
+        </div>
+        <div>
+          <img src="/images/team-blane.png" alt="Blane McElroy" width="392" height="392" class="object-cover" style="width: 392px; height: 392px; max-width: 100%;" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>
