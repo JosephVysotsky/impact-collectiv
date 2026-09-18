@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import posts from '../data/posts.json';
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+
+<Base title="Blog | Impact Collective">
+  <Header />
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="mx-auto px-4 py-8" style="max-width: 980px;">
+      <p style="font-family: var(--font-primary); font-size: 14px; color: #000000; margin-bottom: 32px;">All Posts</p>
+
+      <div class="flex flex-col gap-8">
+        {posts.map((post) => (
+          <a
+            href={`/post/${post.slug}`}
+            class="blog-row grid grid-cols-1 md:grid-cols-2 no-underline"
+            style="border: 1px solid #e5e5e5; background: #ffffff; color: #000000;"
+          >
+            <img
+              src={post.cover}
+              alt=""
+              loading="lazy"
+              class="w-full object-cover"
+              style="height: 352px; background: #e0e0e0;"
+            />
+            <div class="flex flex-col" style="padding: 28px 36px;">
+              <p style="font-family: var(--font-primary); font-size: 12px; color: #000000; margin-bottom: 16px;">
+                {post.author}<br />{formatDate(post.date)} &middot; {post.readTime} min read
+              </p>
+              <h2 class="blog-row-title" style="font-family: var(--font-primary); font-size: 28px; font-weight: 400; line-height: 40px; color: #000000; margin-bottom: 12px;">
+                {post.title}
+              </h2>
+              <p class="blog-row-excerpt" style="font-family: var(--font-primary); font-size: 16px; line-height: 24px; color: #000000;">
+                {post.excerpt}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>
+
+<style>
+  .blog-row-title,
+  .blog-row-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .blog-row:hover .blog-row-title {
+    color: var(--color-text-link);
+  }
+</style>

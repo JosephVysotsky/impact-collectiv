@@ -1,0 +1,115 @@
+---
+import posts from '../data/posts.json';
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+
+<section id="blog" class="w-full" style="background-color: var(--color-bg-white);">
+  <div class="max-w-[var(--content-max-width)] mx-auto px-4 pt-2 pb-12">
+    <h2 class="text-center mb-10 animate-on-scroll" style="font-family: var(--font-primary); font-size: 32px; font-weight: 400; line-height: 45px; letter-spacing: -0.32px; color: var(--color-text-link);">
+      See how we are changing Lives
+    </h2>
+
+    <div class="relative">
+      <button id="blog-prev" type="button" aria-label="Previous posts" class="blog-arrow" style="left: -8px;">&#8249;</button>
+
+      <div id="blog-track" class="blog-track flex gap-6 overflow-x-auto pb-4" style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+        {posts.map((post) => (
+          <a
+            href={`/post/${post.slug}`}
+            class="blog-card flex flex-col no-underline shrink-0"
+            style="width: 320px; max-width: 85vw; scroll-snap-align: start; border: 1px solid #e5e5e5; background: #ffffff; color: #000000;"
+          >
+            <img
+              src={post.cover}
+              alt=""
+              loading="lazy"
+              class="w-full object-cover"
+              style="height: 240px; background: #e0e0e0;"
+            />
+            <div class="flex flex-col flex-1" style="padding: 20px 24px 24px;">
+              <p style="font-family: var(--font-primary); font-size: 12px; color: #000000; margin-bottom: 12px;">
+                {post.author} &middot; {formatDate(post.date)} &middot; {post.readTime} min read
+              </p>
+              <h3 class="blog-card-title" style="font-family: var(--font-primary); font-size: 22px; font-weight: 400; line-height: 30px; color: #000000; margin-bottom: 12px;">
+                {post.title}
+              </h3>
+              <p class="blog-card-excerpt" style="font-family: var(--font-primary); font-size: 14px; line-height: 21px; color: #000000;">
+                {post.excerpt}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <button id="blog-next" type="button" aria-label="Next posts" class="blog-arrow" style="right: -8px;">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog-track {
+    scrollbar-width: thin;
+  }
+  .blog-card-title,
+  .blog-card-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .blog-card-title {
+    -webkit-line-clamp: 3;
+  }
+  .blog-card-excerpt {
+    -webkit-line-clamp: 3;
+  }
+  .blog-card:hover .blog-card-title {
+    color: var(--color-text-link);
+  }
+  .blog-arrow {
+    position: absolute;
+    top: 120px;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background: #ffffff;
+    color: #000000;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4px;
+  }
+  .blog-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+</style>
+
+<script>
+  const track = document.getElementById('blog-track');
+  const prev = document.getElementById('blog-prev') as HTMLButtonElement | null;
+  const next = document.getElementById('blog-next') as HTMLButtonElement | null;
+
+  if (track && prev && next) {
+    const step = () => {
+      const card = track.querySelector<HTMLElement>('.blog-card');
+      return card ? card.offsetWidth + 24 : 344;
+    };
+    const update = () => {
+      prev.disabled = track.scrollLeft <= 0;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+</script>

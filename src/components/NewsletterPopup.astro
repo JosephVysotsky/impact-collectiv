@@ -1,40 +1,42 @@
 ---
 ---
 
-<div id="newsletter-overlay" class="fixed inset-0 z-[1000] hidden items-center justify-center" style="background: rgba(25, 23, 97, 0.95);">
-  <div class="relative flex flex-col md:flex-row" style="background: var(--color-bg-cream); max-width: 812px; width: 90%; max-height: 90vh;">
+<div id="newsletter-overlay" class="fixed inset-0 z-[1000] hidden items-center justify-center" style="background: rgba(25, 23, 97, 0.35);">
+  <div class="relative flex flex-col md:flex-row" style="background: var(--color-bg-cream); max-width: 440px; width: 90%; max-height: 90vh; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);">
     <!-- Close button -->
     <button
       id="newsletter-close"
-      class="absolute top-3 right-4 text-2xl leading-none cursor-pointer z-10"
+      class="absolute top-2 right-3 leading-none cursor-pointer z-10"
       aria-label="Close"
-      style="background: none; border: none; font-size: 24px; color: #000;"
+      style="background: none; border: none; font-size: 15px; color: #000;"
     >
       &#10005;
     </button>
 
     <!-- Left panel -->
-    <div class="flex-1 p-8 flex flex-col justify-center">
-      <h2 style="font-family: var(--font-primary); font-size: 40px; font-weight: 400; color: #000000; margin-bottom: 16px;">
+    <div class="flex-1 p-5 flex flex-col justify-center">
+      <h2 style="font-family: var(--font-primary); font-size: 21px; font-weight: 400; line-height: 26px; color: #000000; margin-bottom: 8px;">
         Subscribe to our newsletter
       </h2>
-      <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 8px;">
+      <p style="font-family: var(--font-primary); font-size: 12px; color: var(--color-text-body); margin-bottom: 4px;">
         <strong>Be the first to know.</strong>
       </p>
-      <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 24px;">
+      <p style="font-family: var(--font-primary); font-size: 12px; line-height: 17px; color: var(--color-text-body); margin-bottom: 12px;">
         Sign up for the Impact Collective newsletter and stay current on our curriculum, new chapters, and the latest in microfinance and financial inclusion.
       </p>
 
-      <form class="flex flex-col gap-3">
-        <label style="font-family: var(--font-primary); font-size: 14px; color: #000;">Enter your email here *</label>
+      <form id="newsletter-form" class="flex flex-col gap-2">
+        <label style="font-family: var(--font-primary); font-size: 12px; color: #000;">Enter your email here *</label>
         <input
           type="email"
+          name="email"
+          required
           placeholder="Email"
-          style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-light); font-size: 14px; color: #000000; width: 100%;"
+          style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 8px; font-family: var(--font-light); font-size: 12px; color: #000000; width: 100%;"
         />
         <button
           type="submit"
-          style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 8px 24px; font-size: 14px; color: #000000; width: 100%; max-width: 244px; cursor: pointer; font-family: var(--font-primary);"
+          style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 5px 16px; font-size: 12px; color: #000000; width: 100%; max-width: 160px; cursor: pointer; font-family: var(--font-primary);"
         >
           Sign Up
         </button>
@@ -42,12 +44,12 @@
     </div>
 
     <!-- Right panel -->
-    <div class="hidden md:block" style="width: 409px; flex-shrink: 0;">
+    <div class="hidden md:block" style="width: 170px; flex-shrink: 0;">
       <img
         src="/images/newsletter-image.jpg"
         alt="Newsletter"
         class="w-full h-full object-cover"
-        style="max-height: 576px; object-position: center;"
+        style="max-height: 300px; object-position: center;"
       />
     </div>
   </div>
@@ -67,6 +69,18 @@
 
   // Close on button click
   closeBtn?.addEventListener('click', () => {
+    overlay?.classList.add('hidden');
+    overlay?.classList.remove('flex');
+  });
+
+  // Sign up via email (static site, same approach as the contact form)
+  const newsletterForm = document.getElementById('newsletter-form') as HTMLFormElement | null;
+  newsletterForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = new FormData(newsletterForm).get('email') || '';
+    const subject = encodeURIComponent('Newsletter signup');
+    const body = encodeURIComponent(`Please add me to the Impact Collective newsletter: ${email}`);
+    window.location.href = `mailto:impactcollectiv0625@gmail.com?subject=${subject}&body=${body}`;
     overlay?.classList.add('hidden');
     overlay?.classList.remove('flex');
   });

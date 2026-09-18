@@ -3,47 +3,95 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const ventures = [
-  { name: "Frostbite's Frozen Ice", image: "/images/venture-frostbite.jpg" },
-  { name: "All Day Soiree", image: "/images/venture-allday.jpg" },
-  { name: "Baked", image: "/images/venture-baked.jpg" },
-  { name: "Curry Kart", image: "/images/venture-currykart.jpg" },
-  { name: "Tutor Lion", image: "/images/venture-tutorlion.jpg" },
-  { name: "TOSCANA", image: "/images/venture-toscana.jpg" },
-  { name: "Beads for Needs", image: "/images/venture-beadsforneeds.jpg" },
+// Two independent columns, matching the Wix layout: expanding a card only pushes down its own column.
+const leftColumn = [
+  {
+    name: "Frostbite's Frozen Ice",
+    image: "/images/venture-frostbite.jpg",
+    description: [
+      "Started by Rishi Mishra in fifth grade as a school market vendor, Frostbite's Frozen Ice expanded over time to car shows, game days, and community events, generating over $2000 per day in revenue at larger events. Revenue from Frostbite funded the first microloans made through PD Microfinance on Kiva, with over $5,000 lent within the first year. It was the first student venture to directly tie business earnings to microlending.",
+    ],
+  },
+  {
+    name: "Tutor Lion",
+    image: "/images/venture-tutorlion.jpg",
+    description: [
+      "Founded by Arjun Rawal, a former Providence Day student, Tutor Lion is a tutoring service that connected with PD Microfinance through the same student venture network. Arjun adopted the model of committing a portion of earnings to fund microloans on Kiva, extending the reach of the program beyond the school community.",
+    ],
+  },
+  {
+    name: "All Day Soiree",
+    image: "/images/venture-allday.jpg",
+    description: [
+      "Run by Olivia, All Day Soirée designs and sets up balloon arrangements for birthdays and local events. She became one of the first student entrepreneurs outside Providence Day to adopt the microfinance model, setting aside a portion of earnings to lend on Kiva while using the partnership to expand her visibility and grow bookings.",
+    ],
+  },
 ];
+
+const rightColumn = [
+  {
+    name: "Curry Kart",
+    image: "/images/venture-currykart.jpg",
+    description: [
+      "Founded by Ishan Desai, Sahej Chauhan, Viraaj Puri, and Kris Gada — a group of freshmen at Providence Day School — Curry Kart sells samosas, chai, and drinks at school events including Fall Fest. From their first event, they committed a portion of profits to fund microloans on Kiva, becoming the second student business to directly support PD Microfinance.",
+    ],
+  },
+  {
+    name: "Cookie Decorators",
+    image: "/images/venture-baked.jpg",
+    description: [
+      "Run by Providence Day freshman Reiss Hubbard and a group of friends, Cookie Decorators started as a simple idea for Fall Fest — set up a table, bring plain cookies, hand people icing and toppings, and let them make something. What they didn't expect was how popular it would be. Students, parents, and teachers lined up not just for the cookies but for the ten minutes of doing something completely low-stakes with their hands. It became one of the more talked-about booths at the event.",
+      "After seeing PD Microfinance's student venture model in action, Reiss and the team decided to commit a portion of their earnings to fund microloans on Kiva. For them the connection made sense — their business runs on giving people access to something small that creates a moment of joy. Microfinance does something similar, just at a much larger scale. They are now a contributing member of the PD Microfinance student venture network.",
+    ],
+  },
+];
+
+const columns = [leftColumn, rightColumn];
 ---
 
 <Base title="Student Ventures | Impact Collective">
   <Header />
-  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h1 class="text-center mb-12" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="mx-auto px-4" style="max-width: 1012px; padding-top: 44px; padding-bottom: 64px;">
+      <h1 class="text-center" style="font-family: var(--font-primary); font-size: 56px; font-weight: 400; line-height: 1.2; color: #000000; margin-bottom: 40px;">
         Student Ventures
       </h1>
 
-      <div class="flex justify-center mb-12">
+      <div class="flex justify-center" style="margin-bottom: 24px;">
         <img
           src="/images/venture-banner.jpg"
           alt="Give a hand up, not a hand out"
-          class="w-full max-w-[980px] object-cover"
+          width="980"
+          height="352"
+          class="w-full object-cover"
+          style="max-width: 980px;"
         />
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {ventures.map((v) => (
-          <div class="flex flex-col items-center" style="width: 370px; max-width: 100%;">
-            <img
-              src={v.image}
-              alt={v.name}
-              width="370"
-              height="267"
-              class="object-cover w-full"
-              style="height: 267px; background: #e0e0e0;"
-            />
-            <h3 style="font-family: var(--font-primary); font-size: 18px; font-weight: 400; color: #000000; margin-top: 12px; text-align: center;">
-              {v.name}
-            </h3>
+      <div class="ventures-columns">
+        {columns.map((column) => (
+          <div class="flex flex-col" style="gap: 100px;">
+            {column.map((v) => (
+              <article class="venture-card" style="width: 370px; max-width: 100%;">
+                <h2 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; line-height: 28px; color: #000000; padding-left: 8px;">
+                  {v.name}
+                </h2>
+                <img
+                  src={v.image}
+                  alt={v.name}
+                  width="370"
+                  height="267"
+                  class="object-cover w-full"
+                  style="height: 267px; background: #e0e0e0;"
+                />
+                <div class="venture-text" style="padding-left: 15px; margin-top: 8px;">
+                  {v.description.map((p) => <p>{p}</p>)}
+                </div>
+                <button type="button" class="venture-toggle" aria-expanded="false" style="margin-left: 15px;">
+                  Read more
+                </button>
+              </article>
+            ))}
           </div>
         ))}
       </div>
@@ -51,3 +99,69 @@ const ventures = [
   </section>
   <Footer />
 </Base>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;700&display=swap');
+
+  .ventures-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+    justify-items: center;
+  }
+  @media (min-width: 900px) {
+    .ventures-columns {
+      grid-template-columns: 370px 370px;
+      column-gap: 115px;
+      padding-left: 34px;
+      justify-content: start;
+      justify-items: start;
+      align-items: start;
+    }
+    /* Wix text box is a full 370px wide, offset 15px from the image edge */
+    .venture-text {
+      width: 385px;
+    }
+  }
+  .venture-text {
+    font-family: 'Wix Madefor Text', var(--font-primary);
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .venture-text.expanded {
+    display: block;
+    overflow: visible;
+  }
+  .venture-text.expanded p + p {
+    margin-top: 24px;
+  }
+  .venture-toggle {
+    font-family: 'Wix Madefor Text', var(--font-primary);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.venture-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const text = btn.previousElementSibling;
+      const expanded = text?.classList.toggle('expanded') ?? false;
+      btn.setAttribute('aria-expanded', String(expanded));
+      btn.textContent = expanded ? 'Read less' : 'Read more';
+    });
+  });
+</script>
