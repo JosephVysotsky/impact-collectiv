@@ -7,14 +7,12 @@ import Footer from '../components/Footer.astro';
 <Base title="Contact us | Impact Collective">
   <Header />
 
-  <!-- Need help? full-width section -->
-  <section class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px;">
-        Need help?
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <ul style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px;">
+  <!-- Need help? — white -->
+  <section class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="contact-column" style="padding-top: 88px; padding-bottom: 51px;">
+      <h1 class="contact-h1">Need help?</h1>
+      <div class="contact-lists">
+        <ul class="contact-list">
           <li>Start a Chapter</li>
           <li>Start a Business</li>
           <li>Microfinance training</li>
@@ -22,10 +20,10 @@ import Footer from '../components/Footer.astro';
           <li>Lend Ledger</li>
           <li>Guest speakers</li>
         </ul>
-        <ul style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px;">
+        <ul class="contact-list">
           <li>Fundraising</li>
           <li>Internships</li>
-          <li>Competition & Events</li>
+          <li>Competition &amp; Events</li>
           <li>Networking</li>
           <li>Job Shadowing</li>
           <li>Service Hours Certificate</li>
@@ -34,90 +32,218 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- Contact Us section -->
-  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 pb-12">
-      <h2 style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; margin-bottom: 16px;">
-        Contact Us
-      </h2>
+  <!-- Contact Us — inset lavender panel -->
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white); padding: 0 40px 40px;">
+    <div style="background-color: rgba(209, 215, 241, 0.8);">
+      <div class="contact-column" style="padding-top: 18px; padding-bottom: 108px;">
+        <h2 class="contact-h2">Contact Us</h2>
 
-      <div style="margin-bottom: 16px;">
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: #000000; margin-bottom: 4px;">Email</p>
-        <a href="mailto:impactcollectiv0625@gmail.com" style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-link); text-decoration: underline;">
-          impactcollectiv0625@gmail.com
-        </a>
-      </div>
+        <div class="contact-info">
+          <div>
+            <p class="contact-label">Email</p>
+            <a href="mailto:impactcollectiv0625@gmail.com" class="contact-mail">impactcollectiv0625@gmail.com</a>
+          </div>
+          <div class="contact-social">
+            <p class="contact-label" style="margin-bottom: 4px;">Social Media</p>
+            <div class="flex" style="gap: 5px; padding-left: 20px;">
+              <a href="https://il.linkedin.com/company/wix-com" target="_blank" rel="noopener">
+                <img src="/images/icon-linkedin.png" alt="LinkedIn" width="23" height="23" />
+              </a>
+              <a href="https://www.instagram.com/pdmicrofinance/" target="_blank" rel="noopener">
+                <img src="/images/icon-instagram.png" alt="Instagram" width="23" height="23" />
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <div style="margin-bottom: 24px;">
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: #000000; margin-bottom: 8px;">Social Media</p>
-        <div class="flex gap-3">
-          <a href="https://www.instagram.com/pdmicrofinance/" target="_blank" rel="noopener">
-            <img src="/images/icon-instagram.svg" alt="Instagram" width="30" height="30" />
-          </a>
+        <form id="contact-form" class="contact-form">
+          <div class="contact-fields">
+            <div>
+              <label for="contact-first-name">First Name</label>
+              <input id="contact-first-name" type="text" name="first_name" />
+            </div>
+            <div>
+              <label for="contact-last-name">Last Name</label>
+              <input id="contact-last-name" type="text" name="last_name" />
+            </div>
+            <div>
+              <label for="contact-email">Email *</label>
+              <input id="contact-email" type="email" name="email" required />
+            </div>
+          </div>
+          <label for="contact-message" style="margin-top: 10px;">Message</label>
+          <textarea id="contact-message" name="message"></textarea>
+          <button type="submit">Send</button>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none;" aria-hidden="true" />
+        </form>
+
+        <div style="min-height: 127px;">
+        <p id="contact-success" class="contact-success" hidden>
+          Thank you for taking the first step toward global financial inclusion. Our team will be in touch within 24 hours with next steps.
+        </p>
         </div>
       </div>
-
-      <form id="contact-form" class="flex flex-col gap-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">First Name</label>
-            <input
-              type="text"
-              name="first_name"
-              style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
-            />
-          </div>
-          <div>
-            <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Last Name</label>
-            <input
-              type="text"
-              name="last_name"
-              style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
-            />
-          </div>
-          <div>
-            <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Email</label>
-            <input
-              type="email"
-              name="email"
-              style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 3px 3px 3px 10px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%;"
-            />
-          </div>
-        </div>
-        <div>
-          <label class="block mb-1" style="font-family: var(--font-primary); font-size: 14px; color: #000;">Message</label>
-          <textarea
-            name="message"
-            style="background: #ffffff; border: 1px solid #000000; border-radius: 0; padding: 10.5px 10px 3px; font-family: var(--font-primary); font-size: 14px; color: #000000; width: 100%; min-height: 120px; resize: vertical;"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          style="background: var(--color-btn-primary-bg); color: #000000; border: 1px solid #545454; border-radius: 0; width: 250px; height: 36px; font-family: var(--font-primary); font-size: 14px; cursor: pointer;"
-        >
-          Send
-        </button>
-      </form>
-
-      <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-top: 16px;">
-        Thank you for taking the first step toward global financial inclusion. Our team will be in touch within 24 hours with next steps.
-      </p>
     </div>
   </section>
   <Footer />
 </Base>
 
+<style>
+  /* Wix lays this page out in a 980px column; offsets below mirror it */
+  .contact-column {
+    max-width: 1012px;
+    margin: 0 auto;
+    padding-left: 36px;
+    padding-right: 16px;
+  }
+  .contact-h1 {
+    font-family: var(--font-primary);
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 52px;
+    color: #000000;
+    margin-bottom: 38px;
+  }
+  .contact-lists {
+    display: grid;
+    grid-template-columns: 441px 449px;
+    padding-left: 15px;
+  }
+  .contact-list {
+    list-style: disc;
+    padding-left: 39px;
+    font-family: var(--font-primary);
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--color-accent-earn);
+  }
+  .contact-h2 {
+    font-family: var(--font-primary);
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -1px;
+    color: #000000;
+    margin-bottom: 91px;
+  }
+  .contact-info {
+    display: flex;
+    gap: 405px;
+    padding-left: 12px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: #000000;
+  }
+  .contact-label {
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  .contact-mail {
+    color: #000000;
+    text-decoration: underline;
+    line-height: 29px;
+  }
+  .contact-social {
+    padding-top: 12px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 790px;
+    max-width: 100%;
+    margin: 68px 0 0 4px;
+    font-family: 'Avenir Next', Avenir, var(--font-primary);
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+  }
+  .contact-fields {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 20px;
+  }
+  .contact-form label {
+    display: block;
+    line-height: 14px;
+    margin-bottom: 9px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0;
+    padding: 3px 10px;
+    font-size: 14px;
+    color: #000000;
+  }
+  .contact-form input {
+    height: 37px;
+  }
+  .contact-form textarea {
+    height: 86px;
+    resize: vertical;
+  }
+  .contact-form button {
+    align-self: flex-end;
+    width: 250px;
+    height: 36px;
+    margin-top: 15px;
+    background: #545454;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .contact-success {
+    width: 624px;
+    max-width: 100%;
+    margin: 16px 0 0 98px;
+    font-family: Futura, 'Century Gothic', var(--font-primary);
+    font-size: 28px;
+    line-height: 37px;
+    text-align: center;
+    color: var(--color-accent-lend);
+  }
+  @media (max-width: 900px) {
+    .contact-column {
+      padding-left: 16px;
+    }
+    .contact-h1 {
+      font-size: 34px;
+    }
+    .contact-lists {
+      grid-template-columns: 1fr;
+      padding-left: 0;
+    }
+    .contact-list {
+      font-size: 22px;
+      line-height: 34px;
+    }
+    .contact-info {
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 0;
+    }
+    .contact-fields {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .contact-form {
+      margin-left: 0;
+    }
+    .contact-success {
+      margin-left: 0;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+</style>
+
 <script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const firstName = data.get('first_name') || '';
-    const lastName = data.get('last_name') || '';
-    const email = data.get('email') || '';
-    const message = data.get('message') || '';
-    const subject = encodeURIComponent(`Contact from ${firstName} ${lastName}`);
-    const body = encodeURIComponent(`Name: ${firstName} ${lastName}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:impactcollectiv0625@gmail.com?subject=${subject}&body=${body}`;
-  });
+  import { wireForm } from '../lib/send-form';
+  wireForm(document.getElementById('contact-form') as HTMLFormElement | null, 'Contact form — impactcollectiv.com', document.getElementById('contact-success'));
 </script>

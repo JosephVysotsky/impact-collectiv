@@ -21,7 +21,7 @@
   --color-btn-cta-bg: #ffffff;
   --color-btn-cta-border: #000000;
 
-  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-primary: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   --font-light: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   --site-max-width: 1326px;
@@ -56,4 +56,20 @@ body {
 .animate-on-scroll.animate-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Home section titles: left-aligned like the Wix page (About Us stays centred) */
+.home-title {
+  text-align: left;
+}
+
+@media (min-width: 1440px) {
+  .home-title {
+    margin-left: -49px;
+  }
+
+  /* "Our Services" hugs the viewport edge on Wix (26px in) */
+  .home-title--edge {
+    margin-left: calc(621px - 50vw + 26px);
+  }
 }

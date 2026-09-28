@@ -12,7 +12,8 @@ const { post } = Astro.props;
 const date = new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 ---
 
-<Base title={`${post.title} | Impact Collective`}>
+<Base title={`${post.title} | Impact Collective`} description={post.excerpt} image={post.cover}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.title, author: { '@type': 'Person', name: post.author }, datePublished: post.date, image: new URL(post.cover, Astro.site).toString(), url: new URL(`/post/${post.slug}`, Astro.site).toString(), publisher: { '@type': 'Organization', name: 'Impact Collective' } })} />
   <Header />
   <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
     <article class="mx-auto px-4 py-12" style="max-width: 740px;">

@@ -8,80 +8,67 @@ import Footer from '../components/Footer.astro';
   <Header />
 
   <!-- Section 1: Hero (white background) -->
-  <section class="w-full" style="background-color: var(--color-bg-white);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-16">
-      <h1 class="text-center mb-4" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000; text-transform: uppercase;">
-        LEND LEDGER
-      </h1>
-      <p class="text-center mb-8 mx-auto" style="font-family: var(--font-primary); font-size: 18px; color: var(--color-text-body); max-width: 700px;">
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="mx-auto px-4" style="max-width: 1012px; padding-top: 87px; padding-bottom: 33px;">
+      <h1 class="ledger-h1">LEND LEDGER</h1>
+      <p class="ledger-subtitle">
         A free accounting and impact tracking app for Kiva lending chapters
       </p>
 
-      <div class="mx-auto mb-10" style="max-width: 700px;">
-        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
+      <div class="ledger-body" style="max-width: 683px; margin: 42px auto 0; transform: translateX(26px);">
+        <p>
           Lend Ledger is a free app built for student-run Kiva lending chapters. It connects to your Kiva team to pull live lending stats, and gives you a simple ledger to log revenue from your ventures, track how much goes toward microloans, and monitor your chapter's overall impact.
         </p>
-        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
-          No spreadsheets, no accounting software, no setup fee. Just download the file, enter your Kiva team ID, and the app configures itself around your chapter in under a minute. Download Lend Ledger and the User Manual below to get started.
+        <p style="margin-top: 24px;">
+          No spreadsheets, no accounting software, no setup fee. Just download the file, enter your Kiva team ID, and the app configures itself around your chapter in under a minute.
+        </p>
+        <p>
+          Download Lend Ledger and the User Manual below to get started.
         </p>
       </div>
 
-      <div class="flex justify-center">
-        <a href="/docs/lend-ledger.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: #3f7652; color: #ffffff; border-radius: 50px; font-family: var(--font-primary); font-size: 16px;">
-          DOWNLOAD
-        </a>
+      <div class="flex justify-center" style="margin-top: 8px;">
+        <a href="/docs/lend-ledger.pdf" target="_blank" rel="noopener noreferrer" class="ledger-btn">DOWNLOAD</a>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Full-width image strip -->
-  <section class="w-full" style="height: 383px; background-image: url('https://static.wixstatic.com/media/11062b_dad0a68f8c424ca3984638166091bf3a~mv2.jpg'); background-size: cover; background-position: center;">
+  <!-- Section 2: Image strip, inset 80px on lavender -->
+  <section class="w-full" style="background-color: var(--color-bg-white); padding: 0 80px;">
+    <div style="height: 383px; background-color: var(--color-bg-lavender); background-image: url('https://static.wixstatic.com/media/11062b_dad0a68f8c424ca3984638166091bf3a~mv2.jpg'); background-size: cover; background-position: center;"></div>
   </section>
 
   <!-- Section 3: Getting Started (lavender background) -->
   <section class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-16">
-      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; text-transform: uppercase;">
-        GETTING STARTED
-      </h2>
-      <div class="mx-auto mb-10" style="max-width: 700px;">
-        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
-          This App is fully plug-and-play for any Kiva chapter. Here's how it works:
-        </p>
-        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
-          First launch — setup screen
-        </p>
-        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 12px;">
-          When you open the file for the first time, you will need to setup screen before the app loads. You will fill in four things
-        </p>
-        <ol style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); list-style: decimal; padding-left: 24px; margin-bottom: 16px;">
-          <li style="margin-bottom: 8px;">Your Chapter name (e.g. "PD Microfinance")</li>
-          <li style="margin-bottom: 8px;">Your Kiva team ID (e.g. pd_microfinance)</li>
-          <li style="margin-bottom: 8px;">Your lending goal with a target date, and the names of their ventures (e.g. Frostbite's Frozen Ice, Curry Kart, Baked)</li>
-        </ol>
-        <p style="font-family: var(--font-primary); font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
-          You click Launch and that's it — the app configures itself around your chapter.
-        </p>
+    <div class="mx-auto px-4" style="max-width: 1012px; padding-top: 80px; padding-bottom: 122px;">
+      <h2 class="ledger-h2">GETTING STARTED</h2>
+      <div class="ledger-rule"></div>
+
+      <div class="ledger-body" style="max-width: 740px; margin: 18px auto 0;">
+        <p>This App is fully plug-and-play for any Kiva chapter. Here's how it works:</p>
+        <p style="margin-top: 24px;">First launch — setup screen</p>
+        <p style="margin-top: 24px;">When you open the file for the first time, you will need to setup screen before the app loads.</p>
+        <p>You will fill in four things</p>
+        <p>1) Your Chapter name (e.g. "PD Microfinance")</p>
+        <p>2) Your Kiva team ID (e.g. pd_microfinance)</p>
+        <p>3) Your lending goal with a target date, and the names of their ventures (e.g. Frostbite's Frozen Ice, Curry Kart, Baked)</p>
+        <p style="margin-top: 24px;">You click Launch and that's it — the app configures itself around your chapter.</p>
       </div>
 
-      <div class="flex justify-center">
-        <a href="#try-it-out" class="inline-flex items-center justify-center no-underline" style="width: 200px; height: 50px; background: #3f7652; color: #ffffff; border-radius: 50px; font-family: var(--font-primary); font-size: 16px;">
-          LAUNCH
-        </a>
+      <div class="flex justify-center" style="margin-top: 32px; transform: translateX(-21px);">
+        <a href="#try-it-out" class="ledger-btn">LAUNCH</a>
       </div>
     </div>
   </section>
 
   <!-- Section 4: Try It Out (white background) -->
   <section id="try-it-out" class="w-full" style="background-color: var(--color-bg-white);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-16">
-      <h2 class="text-center mb-8" style="font-family: var(--font-primary); font-size: 24px; font-weight: 400; color: #000000; text-transform: uppercase;">
-        TRY IT OUT
-      </h2>
-      <div class="flex justify-center">
+    <div class="mx-auto px-4" style="max-width: 1012px; padding-top: 39px;">
+      <h2 class="ledger-h2" style="font-size: 40px; line-height: 48px;">TRY IT OUT</h2>
+      <div class="flex justify-center" style="margin-top: 47px; transform: translateX(46px);">
         <iframe
           src="https://www-impactcollectiv-com.filesusr.com/html/b550da_f7b0728e4bfb65ee6e43d0bd259ee51e.html"
-          style="width: 734px; max-width: 100%; height: 865px; border: none;"
+          style="width: 734px; max-width: 100%; height: 865px; border: none; display: block;"
           title="Lend Ledger App"
         ></iframe>
       </div>
@@ -90,3 +77,68 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Base>
+
+<style>
+  .ledger-h1 {
+    font-family: var(--font-primary);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 65px;
+    text-align: center;
+    color: var(--color-accent-lend);
+  }
+  .ledger-subtitle {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    color: var(--color-text-body);
+    margin-top: 12px;
+  }
+  .ledger-h2 {
+    font-family: var(--font-primary);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+    color: var(--color-accent-lend);
+  }
+  .ledger-rule {
+    width: 30px;
+    height: 3px;
+    background: #000000;
+    margin: 12px auto 0;
+  }
+  .ledger-body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-text-body);
+  }
+  .ledger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 142px;
+    height: 45px;
+    background: #3f7652;
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  @media (max-width: 900px) {
+    .ledger-h1 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .ledger-body,
+    .ledger-btn,
+    #try-it-out .flex,
+    section .flex {
+      transform: none !important;
+    }
+  }
+</style>

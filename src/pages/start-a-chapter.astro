@@ -8,90 +8,159 @@ import Footer from '../components/Footer.astro';
   <Header />
   <!-- Top section: lavender bg -->
   <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h1 style="font-family: var(--font-primary); font-size: 56px; font-weight: 400; letter-spacing: -2.24px; color: #000000; margin-bottom: 24px;">
-        How to Start and Run a Chapter
-      </h1>
-      <div style="max-width: 700px;">
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; letter-spacing: -0.16px; color: #000000; margin-bottom: 16px;">
-          Impact Collective grows through student-led Kiva chapters in schools. These chapters are how we expand access to microfinance and bring more students into the work of financial inclusion. Any student can start a chapter at their school, though we recommend that chapter leads have a basic understanding of finance or entrepreneurship and are able to take on a leadership role (typically upperclassmen in high school).
-        </p>
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; letter-spacing: -0.16px; color: #000000;">
-          This page outlines what a chapter is, how it operates, and the steps to get started. You'll learn how to set up a Kiva lending team, build a student-run venture to generate capital, and use Impact Collective's tools and resources to manage and grow your chapter effectively.
-        </p>
-      </div>
+    <div class="chapter-column" style="padding-top: 70px; padding-bottom: 33px;">
+      <h1 class="chapter-h1">How to Start and Run a Chapter</h1>
+      <p class="chapter-body">
+        Impact Collective grows through student-led Kiva chapters in schools. These chapters are how we expand access to microfinance and bring more students into the work of financial inclusion. Any student can start a chapter at their school, though we recommend that chapter leads have a basic understanding of finance or entrepreneurship and are able to take on a leadership role (typically upperclassmen in high school).
+      </p>
+      <p class="chapter-body" style="margin-bottom: 0;">
+        This page outlines what a chapter is, how it operates, and the steps to get started. You'll learn how to set up a Kiva lending team, build a student-run venture to generate capital, and use Impact Collective's tools and resources to manage and grow your chapter effectively.
+      </p>
     </div>
   </section>
 
-  <!-- Our Goal section: grey bg -->
+  <!-- Our Goal + Steps: grey bg -->
   <section class="w-full" style="background-color: var(--color-bg-grey);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h2 style="font-family: var(--font-primary); font-size: 30px; font-weight: 400; letter-spacing: -0.9px; color: #000000; margin-bottom: 24px;">
-        Our Goal
-      </h2>
-      <div style="max-width: 700px;">
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; letter-spacing: -0.16px; color: #000000; margin-bottom: 16px;">
-          Impact Collective's goal is to build lasting, student-run chapters that make microfinance accessible in schools and put real capital into the hands of underserved entrepreneurs worldwide.
-        </p>
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; letter-spacing: -0.16px; color: #000000; margin-bottom: 16px;">
-          Most students never learn how capital actually works — and even fewer get the chance to put it to work. That's the gap Impact Collective was built to close.
-        </p>
-        <p style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; letter-spacing: -0.16px; color: #000000;">
-          The Chapter Program brings microfinance into schools hands-on. Students don't just study capital, they raise it, manage it, and deploy it through real Kiva loans. Our goal is simple: help students build chapters that last and make a measurable impact.
-        </p>
-      </div>
-    </div>
-  </section>
+    <div class="chapter-column" style="padding-top: 25px; padding-bottom: 29px;">
+      <h2 class="chapter-h2">Our Goal</h2>
+      <p class="chapter-body">
+        Impact Collective's goal is to build lasting, student-run chapters that make microfinance accessible in schools and put real capital into the hands of underserved entrepreneurs worldwide.
+      </p>
+      <p class="chapter-body">
+        Most students never learn how capital actually works — and even fewer get the chance to put it to work. That's the gap Impact Collective was built to close.
+      </p>
+      <p class="chapter-body" style="margin-bottom: 73px;">
+        The Chapter Program brings microfinance into schools hands-on. Students don't just study capital, they raise it, manage it, and deploy it through real Kiva loans. Our goal is simple: help students build chapters that last and make a measurable impact.
+      </p>
 
-  <!-- Steps section: lavender bg -->
-  <section class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <div class="flex flex-col gap-12">
-        <!-- Step 1 -->
-        <div>
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; letter-spacing: -0.2px; color: #000000; margin-bottom: 4px;">Step 1</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-            Apply to Start a Kiva Chapter
-          </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSezlaWYaMAlbwkl3zWs-qLkktfXjsE0vabQQDqpbJeZAVRtPA/viewform" target="_blank" rel="noopener" class="inline-block px-6 py-2 no-underline" style="background: rgb(63, 118, 82); color: #000000; font-family: var(--font-primary); font-size: 14px; border-radius: 100px;">
-            Click Here
-          </a>
+      <div class="chapter-steps">
+        <div class="chapter-step">
+          <h3 class="chapter-step-title">Step 1</h3>
+          <div>
+            <p class="chapter-step-desc">Apply to Start a Kiva Chapter</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSezlaWYaMAlbwkl3zWs-qLkktfXjsE0vabQQDqpbJeZAVRtPA/viewform" target="_blank" rel="noopener" class="chapter-btn">Click Here</a>
+          </div>
         </div>
-
-        <!-- Step 2 -->
-        <div>
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; letter-spacing: -0.2px; color: #000000; margin-bottom: 4px;">Step 2</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-            Launch you business with our playbook
-          </p>
-          <a href="/launch-your-business" class="inline-block px-6 py-2 no-underline" style="background: rgb(63, 118, 82); color: #000000; font-family: var(--font-primary); font-size: 14px; border-radius: 100px;">
-            Click Here
-          </a>
+        <div class="chapter-step">
+          <h3 class="chapter-step-title">Step 2</h3>
+          <div>
+            <p class="chapter-step-desc">Launch you business with our playbook</p>
+            <a href="/launch-your-business" class="chapter-btn">Click Here</a>
+          </div>
         </div>
-
-        <!-- Step 3 -->
-        <div>
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; letter-spacing: -0.2px; color: #000000; margin-bottom: 4px;">Step 3</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-            Lend Actively on Kiva
-          </p>
-          <a href="/lend-ledger" class="inline-block px-6 py-2 no-underline" style="background: rgb(63, 118, 82); color: #000000; font-family: var(--font-primary); font-size: 14px; border-radius: 100px;">
-            Click Here
-          </a>
+        <div class="chapter-step">
+          <h3 class="chapter-step-title">Step 3</h3>
+          <div>
+            <p class="chapter-step-desc">Lend Actively on Kiva</p>
+            <a href="/lend-ledger" class="chapter-btn">Click Here</a>
+          </div>
         </div>
-
-        <!-- Step 4 -->
-        <div>
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; letter-spacing: -0.2px; color: #000000; margin-bottom: 4px;">Step 4</h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; font-weight: 400; color: #000000; margin-bottom: 12px;">
-            Outreach and Scale
-          </p>
-          <a href="/resources" class="inline-block px-6 py-2 no-underline" style="background: rgb(63, 118, 82); color: #000000; font-family: var(--font-primary); font-size: 14px; border-radius: 100px;">
-            Click Here
-          </a>
+        <div class="chapter-step">
+          <h3 class="chapter-step-title">Step 4</h3>
+          <div>
+            <p class="chapter-step-desc">Outreach and Scale</p>
+            <a href="/resources" class="chapter-btn">Click Here</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <Footer />
 </Base>
+
+<style>
+  /* Wix lays this page out in a 980px column with a 30px inset */
+  .chapter-column {
+    max-width: 1012px;
+    margin: 0 auto;
+    padding-left: 46px;
+    padding-right: 16px;
+  }
+  .chapter-h1 {
+    font-family: var(--font-primary);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 65px;
+    letter-spacing: -2.24px;
+    color: var(--color-accent-lend);
+    margin-bottom: 40px;
+  }
+  .chapter-h2 {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: -0.9px;
+    color: var(--color-accent-lend);
+    margin-bottom: 23px;
+  }
+  .chapter-body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    color: #000000;
+    max-width: 800px;
+    margin-bottom: 24px;
+  }
+  .chapter-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 73.5px;
+    padding-left: 5px;
+  }
+  .chapter-step {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: start;
+  }
+  .chapter-step-title {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    color: #000000;
+  }
+  .chapter-step-desc {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 22.4px;
+    color: #000000;
+    padding-left: 1px;
+    margin-bottom: 8px;
+  }
+  .chapter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 142px;
+    height: 40px;
+    background: #3f7652;
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: 'Avenir Next', Avenir, var(--font-primary);
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 3.75px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .chapter-btn:hover {
+    opacity: 0.85;
+  }
+  @media (max-width: 640px) {
+    .chapter-column {
+      padding-left: 16px;
+    }
+    .chapter-h1 {
+      font-size: 38px;
+      line-height: 44px;
+      letter-spacing: -1.2px;
+    }
+    .chapter-step {
+      grid-template-columns: 90px 1fr;
+    }
+  }
+</style>

@@ -7,160 +7,110 @@ import Footer from '../components/Footer.astro';
 <Base title="Launch your Business | Impact Collective">
   <Header />
   <section id="main-content" class="w-full" style="background-color: #ffffff;">
-    <div class="w-full">
-      <!-- Hero: overlapping layout (full-width) -->
-      <div class="relative" style="min-height: 622px;">
-        <!-- Image (right side, behind) -->
-        <div class="absolute top-0 right-0" style="width: 62%; height: 622px;">
-          <img src="/images/launch-hero-kid.jpg" alt="Student business" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-        </div>
-
-        <!-- Text overlay (left side, overlapping image) -->
-        <div class="relative z-10 flex items-center" style="min-height: 622px;">
-          <div style="background: rgba(209, 215, 241, 0.8); padding: 48px 40px; margin-left: 4%; width: 42%;">
-            <h1 style="font-size: 48px; font-weight: 400; letter-spacing: -1.92px; margin-bottom: 16px;">
-              <span style="color: rgb(61,155,233);">Build.</span>
-              <span style="color: rgb(5,138,86);"> Earn. </span>
-              <span style="color: rgb(10,22,224);">Lend.</span>
-            </h1>
-
-            <p style="font-size: 16px; color: rgb(84,84,84); line-height: 28.8px; margin-bottom: 20px;">
-              Every real business starts the same way: someone noticed a problem and decided to do something about it. Here's how to go from idea to first sale.
-            </p>
-
-            <h2 style="font-size: 22px; font-weight: 400; letter-spacing: -0.88px; color: #000000; margin-bottom: 16px;">
-              Launch your Business using our playbook.
-            </h2>
-
-            <a href="/docs/playbook.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; background: rgb(63,118,82); border-radius: 50px; padding: 3px; width: 142px; height: 40px; color: #000000; font-size: 10px; text-decoration: none; letter-spacing: 1px;">
-              Playbook
-            </a>
-          </div>
-        </div>
+    <!-- Hero: lavender panel overlapping the photo (Wix: 1548px stage) -->
+    <div class="launch-hero">
+      <img src="/images/launch-hero-kid.jpg" alt="Student business" class="launch-hero-img" />
+      <div class="launch-hero-panel">
+        <h1 class="launch-hero-title">
+          <span style="color: rgb(61,155,233);">Build.</span>
+          <span style="color: rgb(5,138,86);">Earn.</span>
+          <span style="color: rgb(10,22,224);">Lend.</span>
+        </h1>
+        <p class="launch-hero-text">
+          Every real business starts the same way: someone noticed a problem and decided to do something about it. Here's how to go from idea to first sale.
+        </p>
+        <h2 class="launch-hero-sub">Launch your Business using our playbook.</h2>
+        <a href="/docs/playbook.pdf" target="_blank" rel="noopener noreferrer" class="launch-btn">Playbook</a>
       </div>
+    </div>
 
-      <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-        <!-- Part 1 - Launch -->
-        <h2 class="text-center mb-8" style="font-size: 38px; font-weight: 400; letter-spacing: -1.14px; color: #000000;">
-          Part 1 - Launch
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="text-center p-6" style="background: rgb(191,191,191); border: none;">
-            <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 8px;">spot the gap</p>
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Find a Need</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              What frustrates people around you? What's missing at school, in your neighborhood, or in your community? That's your starting point.
-            </p>
+    <div class="mx-auto px-4" style="max-width: 1012px; padding-bottom: 167px;">
+        <h2 class="launch-part launch-part--p1" style="transform: translateX(0px);">Part 1 - Launch</h2>
+        <div class="launch-cards launch-cards--p1">
+          <div class="launch-card" style="background: rgb(191,191,191);">
+            <p class="launch-card-label">spot the gap</p>
+            <h3 class="launch-card-title">Find a Need</h3>
+            <p class="launch-card-body">What frustrates people around you? What's missing at school, in your neighborhood, or in your community? That's your starting point.</p>
           </div>
-          <div class="text-center p-6" style="background: rgb(209,215,241); border: none;">
-            <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 8px;">product or service?</p>
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Choose your model</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Products = something you make or sell. Services = something you do. Services are usually cheaper to start — no inventory needed.
-            </p>
+          <div class="launch-card" style="background: rgb(209,215,241);">
+            <p class="launch-card-label">product or service?</p>
+            <h3 class="launch-card-title">Choose your model</h3>
+            <p class="launch-card-body">Products = something you make or sell. Services = something you do. Services are usually cheaper to start — no inventory needed.</p>
           </div>
-          <div class="text-center p-6" style="background: rgb(184,244,221); border: none;">
-            <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 8px;">know your customer</p>
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Who is it for?</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Get specific. "Everyone" is not a customer. Is it students? Parents? Local businesses? The narrower you go, the easier it is to sell.
-            </p>
+          <div class="launch-card" style="background: rgb(184,244,221);">
+            <p class="launch-card-label">know your customer</p>
+            <h3 class="launch-card-title">Who is it for?</h3>
+            <p class="launch-card-body">Get specific. "Everyone" is not a customer. Is it students? Parents? Local businesses? The narrower you go, the easier it is to sell.</p>
+          </div>
+        </div>
+        <h2 class="launch-part launch-part--p2" style="transform: translateX(-28px);">Part 2 - Set up the Basics</h2>
+        <div class="launch-cards launch-cards--p2">
+          <div class="launch-card" style="background: rgb(191,191,191);">
+            <h3 class="launch-card-title">Pricing</h3>
+            <p class="launch-card-body">Cover your costs, add a margin. If people say it's too expensive without hesitation, it's probably priced right.</p>
+          </div>
+          <div class="launch-card" style="background: rgb(209,215,241);">
+            <h3 class="launch-card-title">Roles</h3>
+            <p class="launch-card-body">Assign a sales lead, finance lead, and ops lead early. Confusion costs money.</p>
+          </div>
+          <div class="launch-card" style="background: rgb(184,244,221);">
+            <h3 class="launch-card-title">Track</h3>
+            <p class="launch-card-body">Track every dollar from day one. A simple spreadsheet beats forgetting where the money went.</p>
+          </div>
+        </div>
+        <h2 class="launch-part launch-part--p3" style="transform: translateX(7px);">Part 3 - Scale</h2>
+        <div class="launch-cards launch-cards--p3">
+          <div class="launch-card" style="background: rgb(191,191,191);">
+            <h3 class="launch-card-title">Community Events</h3>
+            <p class="launch-card-body">Frozen treat stands, cultural nights, campus walkathons. Fun, visible, and easy to repeat</p>
+          </div>
+          <div class="launch-card" style="background: rgb(209,215,241);">
+            <h3 class="launch-card-title">Sponsorships</h3>
+            <p class="launch-card-body">Local businesses, Kiva Days with food trucks, matched donations from school foundations.</p>
+          </div>
+          <div class="launch-card" style="background: rgb(184,244,221);">
+            <h3 class="launch-card-title">Online Campaigns</h3>
+            <p class="launch-card-body">Monthly giving challenges, impact posts, alumni outreach via email or LinkedIn.</p>
           </div>
         </div>
 
-        <!-- Part 2 - Set up the Basics -->
-        <h2 class="text-center mb-8" style="font-size: 38px; font-weight: 400; letter-spacing: -1.14px; color: #000000;">
-          Part 2 - Set up the Basics
-        </h2>
+      <!-- Case Study -->
+      <h2 class="launch-case-title">Frostbite's Frozen Ice - A Case Study</h2>
+      <div class="launch-case">
+        <h3 class="launch-h4">Overview</h3>
+        <p class="launch-p18" style="margin-top: 41px;">
+          <strong>Business:</strong> Frostbite's Frozen Ice<br />
+          <strong>Type:</strong> Student-run shaved ice business<br />
+          <strong>Founded:</strong> 6th Grade<br />
+          <strong>Purpose:</strong> Generate revenue to fund microloans through PD Microfinance
+        </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="text-center p-6" style="background: rgb(191,191,191); border: none;">
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Pricing</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Cover your costs, add a margin. If people say it's too expensive without hesitation, it's probably priced right.
-            </p>
-          </div>
-          <div class="text-center p-6" style="background: rgb(209,215,241); border: none;">
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Roles</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Assign a sales lead, finance lead, and ops lead early. Confusion costs money.
-            </p>
-          </div>
-          <div class="text-center p-6" style="background: rgb(184,244,221); border: none;">
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Track</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Track every dollar from day one. A simple spreadsheet beats forgetting where the money went.
-            </p>
-          </div>
-        </div>
+        <h3 class="launch-h4" style="margin-top: 24px;">The Challenge</h3>
+        <p class="launch-p18" style="margin-top: 23px;">When PD Microfinance launched, one-time fundraisers and donations provided limited and unpredictable funding. A more sustainable source of capital was needed to support ongoing lending activity.</p>
 
-        <!-- Part 3 - Scale -->
-        <h2 class="text-center mb-8" style="font-size: 38px; font-weight: 400; letter-spacing: -1.14px; color: #000000;">
-          Part 3 - Scale
-        </h2>
+        <h3 class="launch-h3" style="margin-top: 23px;">The Strategy</h3>
+        <p class="launch-p18" style="margin-top: 24px;">Frostbite's Frozen Ice was expanded from a small neighborhood operation into a larger event-based business. To increase production capacity, a commercial-grade ice shaving machine was purchased using a school loan, replacing a countertop Cuisinart machine that could not keep up with demand.</p>
+        <p class="launch-p18">The upgrade increased production capacity from approximately 50 snow cones per hour to over 200 per hour, allowing the business to serve larger events including school festivals, athletic events, camps, and community gatherings.</p>
+        <p class="launch-p18">As demand grew, high school students were recruited to help operate the stand. Team members were paid hourly wages, and students volunteering through PD Microfinance were able to earn verified service hours.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="text-center p-6" style="background: rgb(191,191,191); border: none;">
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Community Events</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Frozen treat stands, cultural nights, campus walkathons. Fun, visible, and easy to repeat
-            </p>
-          </div>
-          <div class="text-center p-6" style="background: rgb(209,215,241); border: none;">
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Sponsorships</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Local businesses, Kiva Days with food trucks, matched donations from school foundations.
-            </p>
-          </div>
-          <div class="text-center p-6" style="background: rgb(184,244,221); border: none;">
-            <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Online Campaigns</h3>
-            <p style="font-size: 14px; color: var(--color-text-body);">
-              Monthly giving challenges, impact posts, alumni outreach via email or LinkedIn.
-            </p>
-          </div>
-        </div>
-
-        <!-- Case Study -->
-        <h2 class="text-center mb-6" style="font-size: 38px; font-weight: 400; letter-spacing: -1.14px; color: #000000;">
-          Frostbite's Frozen Ice - A Case Study
-        </h2>
-        <div class="mx-auto mb-12" style="max-width: 700px;">
-          <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Overview</h3>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 4px;"><strong>Business:</strong> Frostbite's Frozen Ice</p>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 4px;"><strong>Type:</strong> Student-run shaved ice business</p>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 4px;"><strong>Founded:</strong> 6th Grade</p>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;"><strong>Purpose:</strong> Generate revenue to fund microloans through PD Microfinance</p>
-
-          <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">The Challenge</h3>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
-            When PD Microfinance launched, one-time fundraisers and donations provided limited and unpredictable funding. A more sustainable source of capital was needed to support ongoing lending activity.
-          </p>
-
-          <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">The Strategy</h3>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
-            Frostbite's Frozen Ice was expanded from a small neighborhood operation into a larger event-based business. To increase production capacity, a commercial-grade ice shaving machine was purchased using a school loan, replacing a countertop Cuisinart machine that could not keep up with demand. The upgrade increased production capacity from approximately 50 snow cones per hour to over 200 per hour, allowing the business to serve larger events including school festivals, athletic events, camps, and community gatherings. As demand grew, high school students were recruited to help operate the stand. Team members were paid hourly wages, and students volunteering through PD Microfinance were able to earn verified service hours.
-          </p>
-
-          <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Results</h3>
-          <ul style="font-size: 16px; color: var(--color-text-body); list-style: disc; padding-left: 24px; margin-bottom: 16px;">
+        <h3 class="launch-h3" style="margin-top: 23px;">Results</h3>
+        <ul class="launch-results">
+            <li>Expanded from a small stand to a high-volume event business</li>
             <li>Increased production capacity from 50 to 200+ snow cones per hour</li>
             <li>Created paid work opportunities for student employees</li>
             <li>Provided service-hour opportunities for high school volunteers</li>
             <li>Generated thousands of dollars in lending capital for PD Microfinance</li>
             <li>Helped fund microloans to entrepreneurs in 20+ countries</li>
             <li>Featured in the school newsletter and community communications</li>
-            <li>Increased awareness of PD Microfinance, helping membership grow from ~30 to 150+ students</li>
-          </ul>
+            <li>Increased awareness of PD Microfinance, helping membership grow from approximately 30 students to more than 150 students within weeks</li>
+        </ul>
 
-          <h3 style="font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 12px;">Key Takeaway</h3>
-          <p style="font-size: 16px; color: var(--color-text-body); margin-bottom: 16px;">
-            Frostbite's Frozen Ice demonstrated that student-run businesses can do more than raise money. By combining entrepreneurship with microfinance, it created a sustainable source of lending capital while engaging students in business, service, and global financial inclusion.
-          </p>
-        </div>
+        <h3 class="launch-h3" style="margin-top: 24px;">Key Takeaway</h3>
+        <p class="launch-p16" style="margin-top: 48px;">Frostbite's Frozen Ice demonstrated that student-run businesses can do more than raise money. By combining entrepreneurship with microfinance, it created a sustainable source of lending capital while engaging students in business, service, and global financial inclusion.</p>
+      </div>
 
         <!-- Slideshow -->
-        <div class="text-center mb-12" id="slideshow" style="position: relative; padding: 40px 60px;">
+        <div class="text-center" id="slideshow" style="position: relative; padding: 40px 60px; margin-top: 176px; max-width: 980px;">
           <!-- Prev button -->
           <button onclick="changeSlide(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 28px; cursor: pointer; color: #000;">&#8249;</button>
 
@@ -194,11 +144,199 @@ import Footer from '../components/Footer.astro';
             <button class="slide-dot" data-dot="2" onclick="goToSlide(2)" style="width: 10px; height: 10px; border-radius: 50%; border: none; background: #ccc; cursor: pointer;"></button>
           </div>
         </div>
-      </div>
     </div>
   </section>
   <Footer />
 </Base>
+
+<style>
+  .launch-hero {
+    position: relative;
+    max-width: 1548px;
+    height: 662px;
+    margin: 0 auto;
+  }
+  .launch-hero-img {
+    position: absolute;
+    top: 40px;
+    left: 480px;
+    width: 1068px;
+    max-width: calc(100% - 480px);
+    height: 622px;
+    object-fit: cover;
+    display: block;
+  }
+  .launch-hero-panel {
+    position: absolute;
+    top: 123px;
+    left: 0;
+    width: 774px;
+    height: 410px;
+    padding: 46px 0 0 152px;
+    background: var(--color-bg-lavender);
+  }
+  .launch-hero-title {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -1.92px;
+  }
+  .launch-hero-text {
+    width: 432px;
+    max-width: 100%;
+    margin-top: 27px;
+    font-size: 16px;
+    line-height: 28.8px;
+    color: rgb(84, 84, 84);
+  }
+  .launch-hero-sub {
+    margin-top: 49px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.88px;
+    color: rgb(84, 84, 84);
+  }
+  .launch-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 142px;
+    height: 40px;
+    margin: 36px 0 0 83px;
+    background: rgb(63, 118, 82);
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: 'Avenir Next', Avenir, var(--font-primary);
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 3.75px;
+    text-decoration: none;
+  }
+  .launch-part {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -1.14px;
+    text-align: center;
+    color: #000000;
+  }
+  .launch-part--p1 { margin-top: 141px; }
+  .launch-part--p2 { margin-top: 153px; }
+  .launch-part--p3 { margin-top: 123px; }
+  .launch-cards {
+    display: flex;
+    justify-content: center;
+  }
+  .launch-cards--p1 { margin-top: 12px; }
+  .launch-cards--p2 { margin-top: 3px; }
+  .launch-cards--p3 { margin-top: 23px; }
+  .launch-card {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    margin-left: -2px;
+    text-align: center;
+    color: #000000;
+  }
+  .launch-cards--p1 .launch-card { width: 299px; height: 286px; }
+  .launch-cards--p2 .launch-card { width: 308px; height: 271px; }
+  .launch-cards--p3 .launch-card { width: 311px; height: 252px; }
+  .launch-card-label {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .launch-card-title {
+    padding-top: 101px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .launch-card-body {
+    width: 240px;
+    margin: 14px auto 0;
+    font-size: 14px;
+    line-height: 20.7px;
+  }
+  .launch-case-title {
+    margin-top: 102px;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -1.14px;
+    text-align: center;
+    color: var(--color-text-link);
+  }
+  .launch-case {
+    margin-top: 40px;
+    padding-left: 5px;
+    color: #000000;
+  }
+  .launch-h4 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    color: var(--color-accent-lend);
+  }
+  .launch-h3 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    color: var(--color-accent-lend);
+  }
+  .launch-p18 {
+    font-size: 18px;
+    line-height: 23.5px;
+  }
+  .launch-p16 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .launch-results {
+    margin-top: 48px;
+    padding-left: 29px;
+    list-style: disc;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (max-width: 1000px) {
+    .launch-hero {
+      height: auto;
+    }
+    .launch-hero-img {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+      height: 320px;
+    }
+    .launch-hero-panel {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 32px 16px;
+    }
+    .launch-btn {
+      margin-left: 0;
+    }
+    .launch-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .launch-card {
+      margin-left: 0;
+      max-width: 100%;
+    }
+    .launch-part {
+      transform: none !important;
+      margin-top: 64px;
+    }
+  }
+</style>
 
 <script>
   let currentSlide = 0;

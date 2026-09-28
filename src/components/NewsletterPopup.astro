@@ -56,6 +56,8 @@
 </div>
 
 <script>
+  import { sendForm } from '../lib/send-form';
+
   const overlay = document.getElementById('newsletter-overlay');
   const closeBtn = document.getElementById('newsletter-close');
 
@@ -73,16 +75,18 @@
     overlay?.classList.remove('flex');
   });
 
-  // Sign up via email (static site, same approach as the contact form)
+  // Sign up: relay the address to the site inbox (static site, no mail server)
   const newsletterForm = document.getElementById('newsletter-form') as HTMLFormElement | null;
-  newsletterForm?.addEventListener('submit', (e) => {
+  newsletterForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = new FormData(newsletterForm).get('email') || '';
-    const subject = encodeURIComponent('Newsletter signup');
-    const body = encodeURIComponent(`Please add me to the Impact Collective newsletter: ${email}`);
-    window.location.href = `mailto:impactcollectiv0625@gmail.com?subject=${subject}&body=${body}`;
-    overlay?.classList.add('hidden');
-    overlay?.classList.remove('flex');
+    const button = newsletterForm.querySelector('button');
+    if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+    try {
+      await sendForm(newsletterForm, 'Newsletter signup — impactcollectiv.com');
+      newsletterForm.innerHTML = '<p style="font-family: var(--font-primary); font-size: 14px; color: #000;">Thanks for subscribing!</p>';
+    } catch {
+      if (button) { button.disabled = false; button.textContent = 'Sign Up'; }
+    }
   });
 
   // Close on overlay click (outside card)

@@ -6,39 +6,68 @@ import Footer from '../components/Footer.astro';
 
 <Base title="Executive Board | Impact Collective">
   <Header />
-  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
-    <div class="max-w-[var(--content-max-width)] mx-auto px-4 py-12">
-      <h1 class="text-center mb-12" style="font-family: var(--font-primary); font-size: 48px; font-weight: 400; letter-spacing: -1.9px; color: #000000;">
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
+    <div class="mx-auto px-4" style="max-width: 1012px; padding-top: 49px; padding-bottom: 139px;">
+      <h1 class="text-center" style="font-family: var(--font-primary); font-size: 56px; font-weight: 400; line-height: 78px; color: #000000; margin-bottom: 13px;">
         Executive Board
       </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center" style="max-width: 800px; margin: 0 auto;">
-        <div class="text-center">
-          <img src="/images/team-rishi.jpg" alt="Rishi Mishra" width="279" height="285" class="object-cover" style="width: 279px; height: 285px; margin: 0 auto 16px;" />
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 4px;">
-            Rishi Mishra
-          </h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-bottom: 12px;">
-            President / Director of Operations
-          </p>
-          <a href="/docs/rishi-mishra-bio.pdf" style="font-family: var(--font-light); font-size: 15px; color: var(--color-text-link); text-decoration: underline;">
-            Read More
-          </a>
+      <div class="board-grid">
+        <div class="board-card">
+          <img src="/images/team-rishi.jpg" alt="Rishi Mishra" width="279" height="285" class="object-cover" style="width: 279px; height: 285px;" />
+          <h2 class="board-name">Rishi Mishra</h2>
+          <p class="board-role">President / Director of Operations</p>
+          <a href="/docs/rishi-mishra-bio.pdf" class="board-link">Read More</a>
         </div>
-        <div class="text-center">
-          <img src="/images/team-blane.png" alt="Blane McElroy" width="279" height="285" class="object-cover" style="width: 279px; height: 285px; margin: 0 auto 16px;" />
-          <h3 style="font-family: var(--font-primary); font-size: 20px; font-weight: 400; color: #000000; margin-bottom: 4px;">
-            Blane McElroy
-          </h3>
-          <p style="font-family: var(--font-primary); font-size: 14px; color: var(--color-text-body); margin-bottom: 12px;">
-            Director of Marketing & Communications
-          </p>
-          <a href="/blane-mcelroy" style="font-family: var(--font-light); font-size: 15px; color: var(--color-text-link); text-decoration: underline;">
-            Read More
-          </a>
+        <div class="board-card">
+          <img src="/images/team-blane.png" alt="Blane McElroy" width="279" height="285" class="object-cover" style="width: 279px; height: 285px;" />
+          <h2 class="board-name">Blane McElroy</h2>
+          <p class="board-role">Director of Marketing &amp; Communications</p>
+          <a href="/blane-mcelroy" class="board-link">Read More</a>
         </div>
       </div>
     </div>
   </section>
   <Footer />
 </Base>
+
+<style>
+  /* Offsets mirror the Wix team list: 279px cards, 85px apart, text inset from the photo edge */
+  .board-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px 85px;
+    padding-left: 15px;
+  }
+  .board-card {
+    width: 279px;
+  }
+  .board-name {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #000000;
+    margin-top: 9px;
+    padding-left: 75px;
+    white-space: nowrap;
+  }
+  .board-role {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    padding-left: 5px;
+    white-space: nowrap;
+  }
+  .board-link {
+    display: inline-block;
+    margin: 3px 0 0 101px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 35px;
+    color: var(--color-text-link);
+    text-decoration: none;
+  }
+</style>

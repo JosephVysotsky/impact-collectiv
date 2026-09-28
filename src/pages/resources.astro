@@ -6,55 +6,78 @@ import Footer from '../components/Footer.astro';
 
 <Base title="Resources | Impact Collective">
   <Header />
-  <section id="main-content" class="w-full" style="background-color: var(--color-bg-lavender);">
+
+  <!-- Hero banner: full-bleed, lavender behind -->
+  <section class="w-full" style="background-color: var(--color-bg-lavender);">
+    <img
+      src="/images/venture-banner.jpg"
+      alt="Give a hand up, not a hand out"
+      class="resources-hero"
+    />
+  </section>
+
+  <section id="main-content" class="w-full" style="background-color: var(--color-bg-white);">
     <div class="resources-container">
 
-      <!-- Section 1: Learning Kit — Image LEFT, Text RIGHT -->
-      <div class="resources-row">
-        <div class="resources-image">
-          <img
-            src="https://static.wixstatic.com/media/b550da_208550ef91574833a3d3720ae224313d~mv2.png/v1/fill/w_260,h_331,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b550da_208550ef91574833a3d3720ae224313d~mv2.png"
-            alt="Learning Kit pamphlet"
-            width="260"
-            height="331"
-          />
-        </div>
-        <div class="resources-text">
+      <!-- Learning Kit — Image LEFT, Text RIGHT -->
+      <div class="resources-row resources-row--kit">
+        <img
+          src="/images/resources-learning-kit.png"
+          alt="Learning Kit"
+          width="260"
+          height="331"
+          class="resources-img"
+          style="width: 260px; height: 331px;"
+        />
+        <div class="resources-text" style="max-width: 445px;">
           <h2 class="resources-title">Learning Kit</h2>
-          <p class="resources-body">
+          <p class="resources-body resources-body--loose">
             Microfinance is a way to provide small loans, insurance, and other financial services to people who don't have access to traditional banks. This includes low-income individuals, struggling entrepreneurs, and small business owners who need a little financial boost to grow, start a business, or improve their communities.
           </p>
-          <p class="resources-body">
-            PD Microfinance explains it simply with their curated training kit for beginners. <a href="/docs/education-training.pdf" class="resources-link">Click</a>
+          <p class="resources-body resources-body--loose">
+            PD Microfinance explains it simply with their curated training kit for beginners. <a href="/docs/education-training.pdf" target="_blank" rel="noopener" class="resources-link">Click</a>
           </p>
         </div>
       </div>
 
-      <!-- Divider -->
       <hr class="resources-divider" />
 
-      <!-- Section 2: Workshops — Title LEFT, Image RIGHT -->
-      <div class="resources-row">
-        <div class="resources-text">
-          <h2 class="resources-title">Workshops</h2>
-        </div>
-        <div class="resources-image">
-          <img
-            src="https://static.wixstatic.com/media/b550da_0a9b7f4551cb4223b54db635ca0d0ecd~mv2.jpg/v1/crop/x_0,y_156,w_2000,h_2086/fill/w_388,h_333,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/C36EB1EC-8075-405F-BFCA-20DCB339D6FF_edited.jpg"
-            alt="Workshops group photo"
-            width="388"
-            height="333"
-          />
-        </div>
+      <!-- Workshops — title band between two dividers -->
+      <div class="resources-band">
+        <h2 class="resources-title" style="margin-bottom: 0;">Workshops</h2>
       </div>
-      <p class="resources-body resources-full-width">
-        This is your Project description. Provide a brief summary to help visitors understand the context and background of your work. Click on "Edit Text" or double click on the text box to start.
-      </p>
 
-      <!-- Section 3: Lend Ledger — Text LEFT, Image RIGHT -->
-      <div class="resources-row resources-row--top">
-        <div class="resources-text">
-          <h2 class="resources-title">Lend Ledger</h2>
+      <hr class="resources-divider" />
+
+      <!-- Workshops — Text LEFT, Image RIGHT -->
+      <div class="resources-row resources-row--workshops">
+        <div class="resources-text" style="max-width: 450px;">
+          <p class="resources-body">
+            For a sustainable microfinance chapter, relying solely on one-time donations and occasional fundraisers is not enough. PD Microfinance's success—consistently ranking #1 among new high school chapters on Kiva for the past two years—has been driven by a student-run business, Frostbite's Frozen Ice.
+          </p>
+          <p class="resources-body">
+            As a private LLC. it sells snow cones at school events, community fairs, the Festival of India, and other local gatherings, generating a steady source of funding for microloans.
+          </p>
+          <p class="resources-body">
+            If you're interested in starting a student business but aren't sure where to begin, check out our playbook for a step-by-step guide. <a href="/start-a-chapter" class="resources-link">Click</a>
+          </p>
+        </div>
+        <img
+          src="/images/resources-workshops.jpg"
+          alt="Frostbite's Frozen Ice"
+          width="438"
+          height="377"
+          class="resources-img"
+          style="width: 438px; height: 377px; object-fit: cover;"
+        />
+      </div>
+
+      <hr class="resources-divider" />
+
+      <!-- Lend Ledger — Text LEFT, Image RIGHT -->
+      <div class="resources-row resources-row--ledger">
+        <div class="resources-text" style="max-width: 402px;">
+          <h2 class="resources-title" style="margin-bottom: 36px;">Lend Ledger</h2>
           <p class="resources-body">
             Lend Ledger is a free app built for student-run Kiva lending chapters. It connects to your Kiva team to pull live lending stats, and gives you a simple ledger to log revenue from your ventures, track how much goes toward microloans, and monitor your chapter's overall impact.
           </p>
@@ -64,17 +87,19 @@ import Footer from '../components/Footer.astro';
           <p class="resources-body">
             Download Lend Ledger and the User Manual below to get started.
           </p>
-          <a href="/lend-ledger" class="resources-link" style="text-decoration: underline;">Check it out</a>
+          <a href="/lend-ledger" class="resources-button">Check it out</a>
         </div>
-        <div class="resources-image">
-          <img
-            src="https://static.wixstatic.com/media/b550da_7a9f4d7daa004c07871e3506f4b31b1f~mv2.png/v1/fill/w_288,h_576,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b550da_7a9f4d7daa004c07871e3506f4b31b1f~mv2.png"
-            alt="Lend Ledger app on smartphone"
-            width="288"
-            height="576"
-          />
-        </div>
+        <img
+          src="/images/resources-lend-ledger.jpg"
+          alt="Smartphone Analytics View"
+          width="402"
+          height="302"
+          class="resources-img"
+          style="width: 402px; height: 302px; object-fit: cover; margin-top: 28px;"
+        />
       </div>
+
+      <hr class="resources-divider" style="margin-bottom: 0;" />
 
     </div>
   </section>
@@ -82,30 +107,54 @@ import Footer from '../components/Footer.astro';
 </Base>
 
 <style>
+  .resources-hero {
+    display: block;
+    width: 100%;
+    height: 446px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .resources-container {
-    max-width: 980px;
+    max-width: 1012px;
     margin: 0 auto;
-    padding: 48px 24px;
+    padding: 125px 16px 46px;
   }
 
   .resources-row {
     display: flex;
-    align-items: center;
-    gap: 60px;
-  }
-
-  .resources-row--top {
     align-items: flex-start;
   }
 
-  .resources-image {
-    flex-shrink: 0;
+  /* Offsets mirror the Wix layout inside its 980px column */
+  .resources-row--kit {
+    padding-left: 111px;
+    gap: 73px;
+    margin-bottom: 121px;
   }
 
-  .resources-image img {
+  .resources-band {
+    padding: 20px 0 176px 145px;
+  }
+
+  .resources-row--workshops {
+    padding: 25px 26px 48px 37px;
+    justify-content: space-between;
+  }
+
+  .resources-row--workshops .resources-text {
+    padding-top: 28px;
+  }
+
+  .resources-row--ledger {
+    padding: 40px 46px 35px 32px;
+    justify-content: space-between;
+  }
+
+  .resources-img {
     display: block;
+    flex-shrink: 0;
     max-width: 100%;
-    height: auto;
   }
 
   .resources-text {
@@ -116,43 +165,82 @@ import Footer from '../components/Footer.astro';
     font-family: var(--font-primary);
     font-size: 30px;
     font-weight: 400;
+    line-height: 35px;
     color: #000000;
-    margin-bottom: 16px;
+    margin-bottom: 21px;
   }
 
   .resources-body {
     font-family: var(--font-primary);
     font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
     color: #000000;
-    margin-bottom: 12px;
-    line-height: 1.5;
+    margin-bottom: 24px;
   }
 
-  .resources-full-width {
-    margin-top: 16px;
+  .resources-body--loose {
+    line-height: 28.8px;
+    margin-bottom: 29px;
   }
 
   .resources-link {
     font-family: var(--font-primary);
     font-size: 16px;
     color: rgb(56, 74, 211);
+    text-decoration: underline;
+  }
+
+  .resources-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 45px;
+    margin: 29px 0 0 30px;
+    background: #3f7652;
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
     text-decoration: none;
   }
 
   .resources-divider {
     border: none;
     border-top: 1px solid #000000;
-    margin: 48px 0;
+    margin: 0;
   }
 
-  @media (max-width: 768px) {
-    .resources-row {
-      flex-direction: column;
-      gap: 24px;
+  @media (max-width: 900px) {
+    .resources-hero {
+      height: 220px;
     }
 
-    .resources-image {
-      text-align: center;
+    .resources-container {
+      padding-top: 48px;
+    }
+
+    .resources-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .resources-row--kit {
+      margin-bottom: 48px;
+    }
+
+    .resources-band {
+      padding: 20px 0 40px;
+    }
+
+    .resources-button {
+      margin-left: 0;
     }
   }
 </style>
